@@ -13,8 +13,10 @@
 macros { //--------------------------------------------------------------------------------------------------------
 		mail: mail 	{ wait-ms = <10>; tap-ms = <10>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
 						bindings = < 	&macro_tap &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M >;	 };
-		dots: dots 	{ wait-ms = <10>; tap-ms = <10>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = < 	&macro_tap 		&kp DOT 		&kp DOT 		&kp DOT			   >;	 };
+		dsp: dsp 	{ wait-ms = <10>; tap-ms = <10>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
+						bindings = < 	&macro_tap 		&kp DOT 		&kp SPACE						   >;	 };
+		csp: csp 	{ wait-ms = <10>; tap-ms = <10>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
+						bindings = < 	&macro_tap 		&kp COMMA 		&kp SPACE						   >;	 };
 		par: par 	{ wait-ms = <10>; tap-ms = <10>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
 						bindings = < 	&macro_tap 		&kp LPAR 		&kp RPAR 		&kp LEFT		   >;	 };
 		brc: brc 	{ wait-ms = <10>; tap-ms = <10>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
@@ -31,8 +33,6 @@ macros { //---------------------------------------------------------------------
 						bindings = < 	&macro_tap 		&kp LS(COMMA) 	&kp LS(DOT) 	&kp LEFT 		   >; 	 };
 		bar: bar 	{ wait-ms = <10>; tap-ms = <10>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
 						bindings = < 	&macro_tap 		&kp LS(BSLH) 	&kp LS(BSLH) 	&kp LEFT 		   >; 	 };
-		rsp: rsp	{ wait-ms = <10>; tap-ms = <10>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = <	&macro_tap 		&kp SPACE		&kp LEFT					 	   >; 	 };
 		qu: qu 		{ wait-ms = <10>; tap-ms = <10>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
 						bindings = <	&macro_tap 		&kp Q 			&kp U						 	   >; 	 };
 		ze: ze 		{ wait-ms = <10>; tap-ms = <10>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
@@ -70,8 +70,10 @@ behaviors { //------------------------------------------------------------------
 		sl: sticky_layer { 		release-after-ms = < 1500 >; 																};
 		sk: sticky_key { 		release-after-ms = <750>; quick-release; 													};
 		mt: mod_tap { 			tapping-term-ms = <200>; 																	};
-		dotmt: dots_mod_tap { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&dots>, <&kp>; display-name = "dots Mod-Tap"; 		};
+		dsp: dsp_mod_tap   { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&dsp>, <&kp>; display-name = "dotspace Mod-Tap"; 	};
+		csp: csp_mod_tap   { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&csp>, <&kp>; display-name = "commaspace Mod-Tap";	};
 		quomt: quo_mod_tap { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
 									tapping-term-ms = <150>; bindings = <&quo>, <&kp>; display-name = "quo Mod-Tap"; 		};
 		apomt: apo_mod_tap { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
@@ -185,7 +187,7 @@ behaviors { //------------------------------------------------------------------
 			#define _1b1 	&kp LSHIFT
 			#define _1b2 	&kp LS(COMMA)
 			#define _1b3 	&quomt 0 DQT
-			#define _1b4 	&rspmt 0 COMMA
+			#define _1b4 	&cspmt 0 COMMA
 			#define _1b5 	&none
 	
 	// right hand
@@ -205,7 +207,7 @@ behaviors { //------------------------------------------------------------------
 			#define _1h11	&amt RC(BSPC) 	BSPC
 		// bottom row
 			#define _1b6 	&none
-			#define _1b7 	&dotmt 0 DOT
+			#define _1b7 	&dspmt 0 DOT
 			#define _1b8 	&apomt 0 APOS
 			#define _1b9 	&kp LS(DOT)
 			#define _1b10	&kp RSHIFT
