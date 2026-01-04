@@ -70,10 +70,6 @@ behaviors { //------------------------------------------------------------------
 		sl: sticky_layer { 		release-after-ms = < 1500 >; 																};
 		sk: sticky_key { 		release-after-ms = <750>; quick-release; 													};
 		mt: mod_tap { 			tapping-term-ms = <200>; 																	};
-		dsp: dsp_mod_tap   { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&dsp>, <&kp>; display-name = "dotspace Mod-Tap"; 	};
-		csp: csp_mod_tap   { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&csp>, <&kp>; display-name = "commaspace Mod-Tap";	};
 		quomt: quo_mod_tap { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
 									tapping-term-ms = <150>; bindings = <&quo>, <&kp>; display-name = "quo Mod-Tap"; 		};
 		apomt: apo_mod_tap { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
