@@ -32,7 +32,7 @@ keymap { compatible = "zmk,keymap";
 				_4h1 _4h2 _4h3 _4h4 _4h5 		_4h6 _4h7 _4h8 _4h9 _4h10
 				   	 _4b2 _4b3 _4b4           		 _4b7 _4b8 _4b9
 				         	   _4thlH	      		 _4thrH 		>; };
-		five 	{ display-name = "five - minecraft"; // -----------------
+		five 	{ display-name = "five - fighting game"; // -----------------
 		bindings = < _5t2 _5t3 _5t4 _5t5 		_5t6 _5t7 _5t8 _5t9
 				_5h1 _5h2 _5h3 _5h4 _5h5 		_5h6 _5h7 _5h8 _5h9 _5h10
 				   	 _5b2 _5b3 _5b4           		 _5b7 _5b8 _5b9
