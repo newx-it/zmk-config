@@ -394,7 +394,7 @@ behaviors { //------------------------------------------------------------------
 			#define	_4thrH	&none
 			#define _4thrN	&none
 
-// layer 5 - minecraft
+// layer 5 - fighting game
 	// left hand
 		// top row
 			#define _5t0 	&kp TAB
@@ -409,36 +409,36 @@ behaviors { //------------------------------------------------------------------
 			#define _5h2 	&kp A
 			#define _5h3 	&kp W
 			#define _5h4 	&kp D
-			#define _5h5 	&mt B G
+			#define _5h5 	&kp F
 		// bottom row
 			#define _5b0 	&amt LC(BSPC) 	BSPC
 			#define _5b1 	&kp LSHIFT
-			#define _5b2 	&kp Q
-			#define _5b3 	&kp S
-			#define _5b4 	&kp E
+			#define _5b2 	&kp Z
+			#define _5b3 	&kp X
+			#define _5b4 	&kp C
 			#define _5b5 	&none
 	
 	// right hand
 		// top row
-			#define _5t6 	&kp C_PP
-			#define _5t7 	&kp C_PREV
-			#define _5t8 	&kp C_NEXT
-			#define _5t9 	&kp F7
+			#define _5t6 	&kp Y
+			#define _5t7 	&kp U
+			#define _5t8 	&kp I
+			#define _5t9 	&kp O
 			#define _5t10 	&none
 			#define _5t11 	&kp ESC
 		// home row
-			#define _5h6 	&kp C_MUTE
-			#define _5h7 	&kp F2
-			#define _5h8 	&kp F3
-			#define _5h9 	&kp F5
-			#define _5h10	&kp F6
+			#define _5h6 	&kp H
+			#define _5h7 	&kp J
+			#define _5h8 	&kp K
+			#define _5h9 	&kp L
+			#define _5h10	&kp P
 			#define _5h11	&amt RC(BSPC) 	BSPC
 		// bottom row
 			#define _5b6 	&none
-			#define _5b7 	&kp C_VOL_DN
-			#define _5b8 	&kp C_VOL_UP
-			#define _5b9 	&kp F8
-			#define _5b10	&kp RSHIFT
+			#define _5b7 	&kp V
+			#define _5b8 	&kp B
+			#define _5b9 	&kp N
+			#define _5b10	&kp M
 			#define _5b11	&amt RC(DEL) 	DEL
 
 	// thumbfan
@@ -448,7 +448,7 @@ behaviors { //------------------------------------------------------------------
 			#define _5thlF	&none
 			
 			#define _5thrF 	&none
-			#define	_5thrH	&none
+			#define	_5thrH	&kp Z
 			#define _5thrN	&none
 
 // layer 6 - fps
