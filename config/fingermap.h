@@ -102,8 +102,6 @@ behaviors { //------------------------------------------------------------------
 									tapping-term-ms = <150>; bindings = <&csp>, <&kp>; display-name = "csp Mod-Tap"; 				};
 		qumt: qu_mod_tap { 		compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
 									tapping-term-ms = <150>; bindings = <&kp>, <&qu>; display-name = "qu Mod-Tap"; 					};
-		zemt: ze_mod_tap { 		compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&kp>, <&ze>; display-name = "ze Mod-Tap"; 					};
 		oamt: oa_mod_tap { 		compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
 									tapping-term-ms = <150>; bindings = <&oa>, <&kp>; display-name = "oa Mod-Tap"; 					};
 		uemt: ue_mod_tap { 		compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
