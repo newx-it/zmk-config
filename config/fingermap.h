@@ -9,6 +9,8 @@
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 2000
 
+//to implement: taphold "reverse" magic key
+
 / {
 macros { //--------------------------------------------------------------------------------------------------------
 		mail: mail 	{ wait-ms = <10>; tap-ms = <10>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
