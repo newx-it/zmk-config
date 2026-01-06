@@ -38,7 +38,7 @@ combos { compatible = "zmk,combos";
         cbo_m 				{ timeout-ms = <50>; 	key-positions = < 	5 13		>; 	bindings = <	&kp M				>;	layers = <	0		>; 	};
         cbo_f 				{ timeout-ms = <50>; 	key-positions = < 	6 14		>; 	bindings = <	&kp F				>;	layers = <	0		>; 	};
         cbo_b 				{ timeout-ms = <50>; 	key-positions = < 	7 15		>; 	bindings = <	&kp B				>;	layers = <	0		>; 	};
-        cbo_ze 				{ timeout-ms = <50>; 	key-positions = < 	10 11		>; 	bindings = <	&zemt Z 0			>;	layers = <	0		>; 	};
+        cbo_ze 				{ timeout-ms = <50>; 	key-positions = < 	10 11		>; 	bindings = <	&kp Z			>;	layers = <	0		>; 	};
         cbo_qu				{ timeout-ms = <50>; 	key-positions = < 	12 13		>; 	bindings = <	&qumt Q 0			>; 	layers = <	0		>; 	};
         // symbols ---------------------------------------------------------------------------------------------------------------------------------------
 		cbo_none 			{ timeout-ms = <50>; 	key-positions = < 	0 8  		>; 	bindings = <	&amt LG(L) C_SLEEP	>; 	layers = <	1		>; 	};
