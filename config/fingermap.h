@@ -89,11 +89,11 @@ behaviors { //------------------------------------------------------------------
 		mt: mod_tap { 			tapping-term-ms = <200>; 																			};
 
 		gbmt: gb_mod_tap { 		compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <200>; bindings = <&kp B>, <&g_g>; display-name = "gb Mod-Tap"; 				};
+									tapping-term-ms = <200>; bindings = <&kp>, <&g_g>; display-name = "gb Mod-Tap"; 				};
 		xzmt: xz_mod_tap { 		compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <200>; bindings = <&kp Z>, <&g_x>; display-name = "xz Mod-Tap"; 				};
+									tapping-term-ms = <200>; bindings = <&kp>, <&g_x>; display-name = "xz Mod-Tap"; 				};
 		cvmt: cv_mod_tap { 		ncompatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <200>; bindings = <&kp V>, <&g_c>; display-name = "cv Mod-Tap"; 				};
+									tapping-term-ms = <200>; bindings = <&kp>, <&g_c>; display-name = "cv Mod-Tap"; 				};
 
 		quomt: quo_mod_tap { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
 									tapping-term-ms = <150>; bindings = <&quo>, <&kp>; display-name = "quo Mod-Tap"; 				};
@@ -487,13 +487,13 @@ behaviors { //------------------------------------------------------------------
 			#define _6h2 	&kp A
 			#define _6h3 	&kp W
 			#define _6h4 	&kp D
-			#define _6h5 	&gbmt 0 0
+			#define _6h5 	&gbmt B 0
 		// bottom row
 			#define _6b0 	&amt LC(BSPC) 	BSPC
 			#define _6b1 	&kp LSHIFT
-			#define _6b2 	&xzmt 0 0
+			#define _6b2 	&xzmt Z 0
 			#define _6b3 	&kp S
-			#define _6b4 	&cvmt 0 0
+			#define _6b4 	&cvmt V 0
 			#define _6b5 	&none
 	
 	// right hand
