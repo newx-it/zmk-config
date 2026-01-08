@@ -92,7 +92,7 @@ behaviors { //------------------------------------------------------------------
 									tapping-term-ms = <200>; bindings = <&kp>, <&g_g>; display-name = "gb Mod-Tap"; 				};
 		xzmt: xz_mod_tap { 		compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
 									tapping-term-ms = <200>; bindings = <&kp>, <&g_x>; display-name = "xz Mod-Tap"; 				};
-		cvmt: cv_mod_tap { 		ncompatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
+		cvmt: cv_mod_tap { 		compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
 									tapping-term-ms = <200>; bindings = <&kp>, <&g_c>; display-name = "cv Mod-Tap"; 				};
 
 		quomt: quo_mod_tap { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
