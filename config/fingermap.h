@@ -146,7 +146,7 @@ behaviors { //------------------------------------------------------------------
 			#define _0h1 	&hml LALT C
 			#define _0h2 	&hml LCTRL I
 			#define _0h3 	&hml LGUI A
-			#define _0h4 	&hml LSHIFT E
+			#define _0h4 	&mage_e
 			#define _0h5 	&kp Z
 		// bottom row
 			#define _0b0 	&amt LC(BSPC) BSPC
