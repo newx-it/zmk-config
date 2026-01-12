@@ -1,30 +1,33 @@
+//----------------------------------------
 #include <behaviors.dtsi>
 #include <behaviors/unicode.dtsi>
 #include <behaviors/num_word.dtsi>
-
+//----------------------------------------
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-
+//----------------------------------------
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 2000
+//----------------------------------------
 
-//to implement: taphold "reverse" magic key
-
-/ {
-macros { //--------------------------------------------------------------------------------------------------------
-	
-		g_g: g_g 	{ wait-ms = <5>; tap-ms = <20>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = < 	&macro_tap &kp G >;	 };
-		g_c: g_c 	{ wait-ms = <5>; tap-ms = <20>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = < 	&macro_tap &kp C >;	 };
-		g_x: g_x 	{ wait-ms = <5>; tap-ms = <20>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = < 	&macro_tap &kp X >;	 };
-
+/ { macros { //----------------------------------------------------------------------------------------------------
+		oa: oa 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
+						bindings = <	&macro_tap 		&kp O 			&kp A							   >; 	 };
+		ue: ue 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
+						bindings = <	&macro_tap 		&kp U 			&kp E					  		   >;    };
+		ua: ua 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
+						bindings = <	&macro_tap 		&kp U 			&kp A					  		   >;    };
+		ui: ui 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
+						bindings = <	&macro_tap 		&kp U 			&kp I					  		   >;    };
+		uo: uo 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
+						bindings = <	&macro_tap 		&kp U 			&kp O					  		   >; 	 };
+//-----------------------------------------------------------------------------------------------------------------
 		mail: mail 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
 						bindings = < 	&macro_tap &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M >;	 };
 		edu: edu 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
 						bindings = < 	&macro_tap &kp I &kp S &kp U &kp DOT &kp E &kp D &kp U 			   >;	 };
+//-----------------------------------------------------------------------------------------------------------------
 		dsp: dsp 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
 						bindings = < 	&macro_tap 		&kp DOT 		&kp SPACE						   >;	 };
 		csp: csp 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
@@ -45,32 +48,37 @@ macros { //---------------------------------------------------------------------
 						bindings = < 	&macro_tap 		&kp LS(COMMA) 	&kp LS(DOT) 	&kp LEFT 		   >; 	 };
 		bar: bar 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
 						bindings = < 	&macro_tap 		&kp LS(BSLH) 	&kp LS(BSLH) 	&kp LEFT 		   >; 	 };
-		oa: oa 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = <	&macro_tap 		&kp O 			&kp A							   >; 	 };
-		ue: ue 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = <	&macro_tap 		&kp U 			&kp E					  		   >;    };
-		ua: ua 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = <	&macro_tap 		&kp U 			&kp A					  		   >;    };
-		ui: ui 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = <	&macro_tap 		&kp U 			&kp I					  		   >;    };
-		uo: uo 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = <	&macro_tap 		&kp U 			&kp O					  		   >; }; };
-
+//-----------------------------------------------------------------------------------------------------------------
+		g_g: g_g 	{ wait-ms = <5>; tap-ms = <20>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
+						bindings = < 	&macro_tap &kp G >;	 													 };
+		g_c: g_c 	{ wait-ms = <5>; tap-ms = <20>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
+						bindings = < 	&macro_tap &kp C >;	 													 };
+		g_x: g_x 	{ wait-ms = <5>; tap-ms = <20>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
+						bindings = < 	&macro_tap &kp X >;	 		         									 }; };
 //-----------------------------------------------------------------------------------------------------------------
 
-behaviors { //----------------------------------------------------------------------------------------------------------------
+behaviors { //------------------------------------------------------------------------------------------------------------------------
 		hml: home_row_mod_l { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "balanced"; 
 									require-prior-idle-ms = <300>; tapping-term-ms = <300>; quick-tap-ms = <200>; 
 									hold-trigger-key-positions = <>; bindings = <&kp>, <&kp>; 										};
         hmr: home_row_mod_r { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "balanced"; 
 									require-prior-idle-ms = <300>; tapping-term-ms = <300>; quick-tap-ms = <200>; 
 									hold-trigger-key-positions = <>; bindings = <&kp>, <&kp>; 										};
+//------------------------------------------------------------------------------------------------------------------------------------
         num_word: num_word { 	#binding-cells = <1>; compatible = "zmk,behavior-auto-layer"; 
 									continue-list = < BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL >; ignore-numbers;				};
+		cmt: caps_tap { 		compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "balanced"; 
+									tapping-term-ms = <150>; bindings = <&kp>, 
+									<&caps_word>; display-name = "Caps-Tap"; 														};
+		mt: mod_tap { 			tapping-term-ms = <200>; 																			};
 		amt: a_mod_tap { 		compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&kp>, <&kp>; display-name = "a-Mod-Tap"; 					};
-		mage_tap: mage_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-								  tapping-term-ms = <150>; bindings = <&mage_rev>, <&mage_rep>; display-name = "mage-Mod-Tap"; 		}; 
+									tapping-term-ms = <150>; bindings = <&kp>, <&kp>; display-name = "a-mod-Tap"; 					};
+//------------------------------------------------------------------------------------------------------------------------------------
+		uc: unicode { 			default-mode = <UC_MODE_WIN_COMPOSE>;																};
+//------------------------------------------------------------------------------------------------------------------------------------
+		sl: sticky_layer { 		release-after-ms = <750>; quick-release; 															};
+		sk: sticky_key { 		release-after-ms = <750>; quick-release; 															};
+//------------------------------------------------------------------------------------------------------------------------------------
 		mage_rev: mage_rev { 	compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&key_repeat>;
 									akt_ctl_tw { trigger-keys = < LC(T) >; max-prior-idle-ms = <300>; bindings = < &kp LC(W) >; };
 									akt_ctl_wt { trigger-keys = < LC(W) >; max-prior-idle-ms = <300>; bindings = < &kp LC(T) >; };	
@@ -94,46 +102,43 @@ behaviors { //------------------------------------------------------------------
 									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&ui>; }; 					};
 		mage_o: mage_o { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&oamt 0 O>;
 									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uo>; }; 					};
-		cmt: caps_tap { 		compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "balanced"; 
-									tapping-term-ms = <150>; bindings = <&kp>, 
-									<&caps_word>; display-name = "Caps-Tap"; 														};
-		uc: unicode { 			default-mode = <UC_MODE_WIN_COMPOSE>;																};
-		sl: sticky_layer { 		release-after-ms = < 1500 >; 																		};
-		sk: sticky_key { 		release-after-ms = <750>; quick-release; 															};
-		mt: mod_tap { 			tapping-term-ms = <200>; 																			};
-
-		gbmt: gb_mod_tap { 		compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&kp>, <&g_g>; display-name = "gb Mod-Tap"; 				};
-		xzmt: xz_mod_tap { 		compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&kp>, <&g_x>; display-name = "xz Mod-Tap"; 				};
-		cvmt: cv_mod_tap { 		compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&kp>, <&g_c>; display-name = "cv Mod-Tap"; 				};
-
-		quomt: quo_mod_tap { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&quo>, <&kp>; display-name = "quo Mod-Tap"; 				};
-		apomt: apo_mod_tap { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&apo>, <&kp>; display-name = "apo Mod-Tap"; 				};
-		parmt: par_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&gra>, <&par>; display-name = "par Mod-Tap"; 				};
-		brcmt: brc_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&abt>, <&brc>; display-name = "brc Mod-Tap"; 				};
-		bktmt: bkt_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&bar>, <&bkt>; display-name = "bkt Mod-Tap"; 				};
-		gramt: gra_mod_tap { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&gra>, <&kp>; display-name = "gra Mod-Tap"; 				};
-		abtmt: abt_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&abt>, <&kp>; display-name = "abt Mod-Tap"; 				};
-		barmt: bar_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&bar>, <&kp>; display-name = "bar Mod-Tap"; 				};
-		dspmt: dsp_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&dsp>, <&kp>; display-name = "dsp Mod-Tap"; 				};
-		cspmt: csp_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&csp>, <&kp>; display-name = "csp Mod-Tap"; 				};
+//------------------------------------------------------------------------------------------------------------------------------------
+		mage_tap: mage_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
+								  tapping-term-ms = <150>; bindings = <&mage_rev>, <&mage_rep>; display-name = "mage-mod-Tap"; 		};
+//------------------------------------------------------------------------------------------------------------------------------------
 		oamt: oa_mod_tap { 		compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&oa>, <&kp>; display-name = "oa Mod-Tap"; 					};
+									tapping-term-ms = <150>; bindings = <&oa>, <&kp>; display-name = "oa mod-Tap"; 					};
 		uemt: ue_mod_tap { 		compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&ue>, <&kp>;  display-name = "ue Mod-Tap";   }; }; 		};
-//----------------------------------------------------------------------------------------------------------------------------
+									tapping-term-ms = <150>; bindings = <&ue>, <&kp>;  display-name = "ue mod-Tap";   		 		};
+//------------------------------------------------------------------------------------------------------------------------------------
+		quomt: quo_mod_tap { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&quo>, <&kp>; display-name = "quo mod-Tap"; 				};
+		apomt: apo_mod_tap { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&apo>, <&kp>; display-name = "apo mod-Tap"; 				};
+		parmt: par_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&gra>, <&par>; display-name = "par mod-Tap"; 				};
+		brcmt: brc_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&abt>, <&brc>; display-name = "brc mod-Tap"; 				};
+		bktmt: bkt_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&bar>, <&bkt>; display-name = "bkt mod-Tap"; 				};
+		gramt: gra_mod_tap { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&gra>, <&kp>; display-name = "gra mod-Tap"; 				};
+		abtmt: abt_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&abt>, <&kp>; display-name = "abt mod-Tap"; 				};
+		barmt: bar_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&bar>, <&kp>; display-name = "bar mod-Tap"; 				};
+		dspmt: dsp_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&dsp>, <&kp>; display-name = "dsp mod-Tap"; 				};
+		cspmt: csp_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&csp>, <&kp>; display-name = "csp mod-Tap"; 				};
+//------------------------------------------------------------------------------------------------------------------------------------
+		gbmt: gb_mod_tap { 		compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&kp>, <&g_g>; display-name = "gb mod-Tap"; 				};
+		xzmt: xz_mod_tap { 		compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&kp>, <&g_x>; display-name = "xz mod-Tap"; 				};
+		cvmt: cv_mod_tap { 		compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&kp>, <&g_c>; display-name = "cv mod-Tap"; 		  }; }; };
+//------------------------------------------------------------------------------------------------------------------------------------
 
 //
 // t0  t1  t2  t3  t4  t5  t6  t7  t8  t9  t10  t11
