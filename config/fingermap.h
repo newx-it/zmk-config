@@ -80,6 +80,8 @@ behaviors { //------------------------------------------------------------------
 									akt_gs { trigger-keys = <G>; max-prior-idle-ms = <300>; bindings = <&kp S>; }; 					};
 		mage_j: mage_j { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&kp J>;
 									akt_ue { trigger-keys = <U>; max-prior-idle-ms = <300>; bindings = <&kp E>; }; 					};
+		mage_e: mage_e { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&hml LSHIFT E>;
+									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&ue>; }; 					};
 		cmt: caps_tap { 		compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "balanced"; 
 									tapping-term-ms = <200>; bindings = <&kp>, 
 									<&caps_word>; display-name = "Caps-Tap"; 														};
@@ -138,7 +140,7 @@ behaviors { //------------------------------------------------------------------
 			#define _0t2 	&kp Y
 			#define _0t3 	&oamt 0 O
 			#define _0t4 	&uemt 0 U
-			#define _0t5 	&qumt Q 0
+			#define _0t5 	&kp Q
 		// home row
 			#define _0h0 	&amt LC(DEL) DEL
 			#define _0h1 	&hml LALT C
