@@ -128,12 +128,10 @@ behaviors { //------------------------------------------------------------------
 									tapping-term-ms = <150>; bindings = <&dsp>, <&kp>; display-name = "dsp Mod-Tap"; 				};
 		cspmt: csp_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
 									tapping-term-ms = <150>; bindings = <&csp>, <&kp>; display-name = "csp Mod-Tap"; 				};
-		qumt: qu_mod_tap { 		compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&kp>, <&qu>; display-name = "qu Mod-Tap"; 					};
 		oamt: oa_mod_tap { 		compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&oa>, <&kp>; display-name = "oa Mod-Tap"; 					};
+									tapping-term-ms = <100>; bindings = <&oa>, <&kp>; display-name = "oa Mod-Tap"; 					};
 		uemt: ue_mod_tap { 		compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&ue>, <&kp>;  display-name = "ue Mod-Tap";   }; }; 		};
+									tapping-term-ms = <100>; bindings = <&ue>, <&kp>;  display-name = "ue Mod-Tap";   }; }; 		};
 //----------------------------------------------------------------------------------------------------------------------------
 
 //
