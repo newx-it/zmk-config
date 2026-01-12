@@ -49,7 +49,14 @@ macros { //---------------------------------------------------------------------
 		oa: oa 		{ wait-ms = <10>; tap-ms = <10>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
 						bindings = <	&macro_tap 		&kp O 			&kp A							   >; 	 };
 		ue: ue 		{ wait-ms = <10>; tap-ms = <10>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = <	&macro_tap 		&kp U 			&kp E					  		   >; }; };
+						bindings = <	&macro_tap 		&kp U 			&kp E					  		   >;    };
+		ua: ua 		{ wait-ms = <10>; tap-ms = <10>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
+						bindings = <	&macro_tap 		&kp U 			&kp A					  		   >;    };
+		ui: ui 		{ wait-ms = <10>; tap-ms = <10>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
+						bindings = <	&macro_tap 		&kp U 			&kp I					  		   >;    };
+		uo: uo 		{ wait-ms = <10>; tap-ms = <10>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
+						bindings = <	&macro_tap 		&kp U 			&kp O					  		   >; }; };
+
 //-----------------------------------------------------------------------------------------------------------------
 
 behaviors { //----------------------------------------------------------------------------------------------------------------
@@ -82,6 +89,12 @@ behaviors { //------------------------------------------------------------------
 									akt_ue { trigger-keys = <U>; max-prior-idle-ms = <300>; bindings = <&kp E>; }; 					};
 		mage_e: mage_e { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&hml LSHIFT E>;
 									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&ue>; }; 					};
+		mage_a: mage_a { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&hml LGUI A>;
+									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&ua>; }; 					};
+		mage_i: mage_i { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&hml LCTL I>;
+									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&ui>; }; 					};
+		mage_o: mage_o { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&oamt 0 O>;
+									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uo>; }; 					};
 		cmt: caps_tap { 		compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "balanced"; 
 									tapping-term-ms = <200>; bindings = <&kp>, 
 									<&caps_word>; display-name = "Caps-Tap"; 														};
@@ -138,14 +151,14 @@ behaviors { //------------------------------------------------------------------
 			#define _0t0 	&kp TAB
 			#define _0t1 	&kp V
 			#define _0t2 	&kp Y
-			#define _0t3 	&oamt 0 O
+			#define _0t3 	&mage_o
 			#define _0t4 	&uemt 0 U
 			#define _0t5 	&kp Q
 		// home row
 			#define _0h0 	&amt LC(DEL) DEL
 			#define _0h1 	&hml LALT C
-			#define _0h2 	&hml LCTRL I
-			#define _0h3 	&hml LGUI A
+			#define _0h2 	&mage_i
+			#define _0h3 	&mage_a
 			#define _0h4 	&mage_e
 			#define _0h5 	&kp Z
 		// bottom row
