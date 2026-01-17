@@ -215,11 +215,11 @@ behaviors { //------------------------------------------------------------------
 			#define _1t5 	&amt PIPE 		GRAVE
 		// home row
 			#define _1h0 	&amt LC(DEL) 	DEL
-			#define _1h1 	&amt LS(MINUS)	N3
-			#define _1h2 	&amt LS(N7) 	N2
-			#define _1h3 	&amt EQUAL 		N1
-			#define _1h4 	&amt SEMI 		N0
-			#define _1h5 	&amt LS(GRAVE) 	N4
+			#define _1h1 	&amt LS(MINUS)	N4
+			#define _1h2 	&amt LS(N7) 	N3
+			#define _1h3 	&amt EQUAL 		N2
+			#define _1h4 	&amt SEMI 		N1
+			#define _1h5 	&amt LS(GRAVE) 	SPACE
 		// bottom row
 			#define _1b0 	&amt LC(BSPC) 	BSPC
 			#define _1b1 	&kp LSHIFT
@@ -254,7 +254,7 @@ behaviors { //------------------------------------------------------------------
 	// thumbfan
 		// 
 			#define _1thlN 	&none
-			#define _1thlH 	&kp SPACE
+			#define _1thlH 	&kp N0
 			#define _1thlF	&none
 			
 			#define _1thrF 	&none
