@@ -403,7 +403,7 @@ behaviors { //------------------------------------------------------------------
 		// bottom row
 			#define _4b0 	&amt LC(BSPC) 	BSPC
 			#define _4b1 	&kp LSHIFT
-			#define _4b2 	&mt LALT X
+			#define _4b2 	&mt V X
 			#define _4b3 	&kp D
 			#define _4b4 	&kp F
 			#define _4b5 	&none
