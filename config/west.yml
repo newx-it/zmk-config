@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/urob
     - name: newx-it
       url-base: https://github.com/newx-it
+    - name: nguyendown
+      url-base: https://github.com/nguyendown
   projects:
     - name: zmk
       remote: zmk
@@ -22,6 +24,9 @@ manifest:
       revision: v0.3
     - name: zmk-nice-oled
       remote: newx-it
-      revision: main
+      revision: v0.3
+    - name: zmk-behavior-socd
+      remote: nguyendown
+      revision: v0.3
   self:
     path: config
