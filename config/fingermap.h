@@ -1,5 +1,6 @@
 //----------------------------------------
 #include <behaviors.dtsi>
+#include <behaviors/socd.dtsi>
 #include <behaviors/unicode.dtsi>
 #include <behaviors/num_word.dtsi>
 //----------------------------------------
@@ -510,9 +511,9 @@ behaviors { //------------------------------------------------------------------
 		// home row
 			#define _6h0 	&amt LC(DEL) 	DEL
 			#define _6h1 	&kp LSHIFT
-			#define _6h2 	&kp A
+			#define _6h2 	&socd A
 			#define _6h3 	&kp W
-			#define _6h4 	&kp D
+			#define _6h4 	&socd D
 			#define _6h5 	&gbmt B 0
 		// bottom row
 			#define _6b0 	&amt LC(BSPC) 	BSPC
