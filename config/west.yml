@@ -24,9 +24,9 @@ manifest:
       revision: v0.3
     - name: zmk-nice-oled
       remote: newx-it
-      revision: v0.3
+      revision: main
     - name: zmk-behavior-socd
       remote: nguyendown
-      revision: v0.3
+      revision: main
   self:
     path: config
