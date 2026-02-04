@@ -64,6 +64,8 @@
 //-----------------------------------------------------------------------------------------------------------------
 
 behaviors { //------------------------------------------------------------------------------------------------------------------------
+		socd2: socd2 { compatible = "zmk,behavior-socd"; #binding-cells = <1>; bindings = <&kp>; 									};
+//------------------------------------------------------------------------------------------------------------------------------------
 		hml: home_row_mod_l { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "balanced"; 
 									require-prior-idle-ms = <300>; tapping-term-ms = <300>; quick-tap-ms = <200>; 
 									hold-trigger-key-positions = <>; bindings = <&kp>, <&kp>; 										};
@@ -454,9 +456,9 @@ behaviors { //------------------------------------------------------------------
 		// home row
 			#define _5h0 	&amt LC(DEL) 	DEL
 			#define _5h1 	&kp LSHIFT
-			#define _5h2 	&kp A
-			#define _5h3 	&kp W
-			#define _5h4 	&kp D
+			#define _5h2 	&socd A
+			#define _5h3 	&socd2 S
+			#define _5h4 	&socd D
 			#define _5h5 	&kp F
 		// bottom row
 			#define _5b0 	&amt LC(BSPC) 	BSPC
@@ -492,7 +494,7 @@ behaviors { //------------------------------------------------------------------
 	// thumbfan
 		// 
 			#define _5thlN 	&none
-			#define _5thlH 	&kp SPACE
+			#define _5thlH 	&socd2 SPACE
 			#define _5thlF	&none
 			
 			#define _5thrF 	&none
