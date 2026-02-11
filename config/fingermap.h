@@ -102,17 +102,15 @@ behaviors { //------------------------------------------------------------------
 									akt_mail { trigger-keys = <AT>; bindings = <&mail>; };
 									akt_yi { trigger-keys = <Y>; max-prior-idle-ms = <300>; bindings = <&kp I>; };
             						akt_ji { trigger-keys = <J>; max-prior-idle-ms = <300>; bindings = <&kp I>; }; 					};
-		mage_w: mage_w { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&kp W>;
+		mage_w: mage_w { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&amt LS(W) W>;
 									akt_gs { trigger-keys = <G>; max-prior-idle-ms = <300>; bindings = <&kp S>; }; 					};
-		mage_j: mage_j { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&kp J>;
-									akt_ue { trigger-keys = <U>; max-prior-idle-ms = <300>; bindings = <&kp E>; }; 					};
-		mage_e: mage_e { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&hml LSHIFT E>;
+		mage_e: mage_e { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&amt LS(E) E>;
 									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&ue>; }; 					};
-		mage_a: mage_a { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&hml LGUI A>;
+		mage_a: mage_a { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&amt LS(A) A>;
 									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&ua>; }; 					};
-		mage_i: mage_i { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&hml LCTL I>;
+		mage_i: mage_i { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&amt LS(I) I>;
 									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&ui>; }; 					};
-		mage_o: mage_o { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&oamt 0 O>;
+		mage_o: mage_o { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&amt LS(O) O>;
 									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uo>; }; 					};
 //------------------------------------------------------------------------------------------------------------------------------------
 		mage_tap: mage_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
@@ -163,46 +161,46 @@ behaviors { //------------------------------------------------------------------
 	// left hand
 		// top row
 			#define _0t0 	&kp TAB
-			#define _0t1 	&kp V
-			#define _0t2 	&kp Y
+			#define _0t1 	&amt LS(V) V
+			#define _0t2 	&amt LS(Y) Y
 			#define _0t3 	&mage_o
-			#define _0t4 	&uemt 0 U
-			#define _0t5 	&kp Q
+			#define _0t4 	&amt LS(U) U
+			#define _0t5 	&amt LS(Q) Q
 		// home row
 			#define _0h0 	&amt LC(DEL) DEL
-			#define _0h1 	&hml LALT C
+			#define _0h1 	&amt LS(C) C
 			#define _0h2 	&mage_i
 			#define _0h3 	&mage_a
 			#define _0h4 	&mage_e
-			#define _0h5 	&kp Z
+			#define _0h5 	&amt LS(Z) Z
 		// bottom row
 			#define _0b0 	&amt LC(BSPC) BSPC
 			#define _0b1 	&kp LSHIFT
-			#define _0b2 	&mage_j
-			#define _0b3 	&kp X
+			#define _0b2 	&amt LS(J) J
+			#define _0b3 	&amt LS(X) X
 			#define _0b4 	&mage_tap 0 0
 			#define _0b5 	&none
 	
 	// right hand
 		// top row
-			#define _0t6 	&kp P
-			#define _0t7 	&kp D
-			#define _0t8 	&kp L
-			#define _0t9 	&kp F
-			#define _0t10 	&kp B
+			#define _0t6 	&amt LS(P) P
+			#define _0t7 	&amt LS(D) D
+			#define _0t8 	&amt LS(L) L
+			#define _0t9 	&amt LS(F) F
+			#define _0t10 	&amt LS(B) B
 			#define _0t11 	&kp ESC
 		// home row
-			#define _0h6 	&kp K
-			#define _0h7 	&hmr RSHIFT T
-			#define _0h8 	&hmr RGUI H
-			#define _0h9 	&hmr RCTRL S
-			#define _0h10	&hmr LALT N
+			#define _0h6 	&amt LS(K) K
+			#define _0h7 	&amt LS(T) T
+			#define _0h8 	&amt LS(H) H
+			#define _0h9 	&amt LS(S) S
+			#define _0h10	&amt LS(N) N
 			#define _0h11	&amt RC(BSPC) BSPC
 		// bottom row
 			#define _0b6 	&none
 			#define _0b7 	&mage_w
-			#define _0b8 	&kp M
-			#define _0b9 	&kp G
+			#define _0b8 	&amt LS(M) M
+			#define _0b9 	&amt LS(G) G
 			#define _0b10	&kp RSHIFT
 			#define _0b11	&amt RC(DEL) DEL
 
