@@ -1,7 +1,7 @@
 manifest:
   remotes:
     - name: zmk
-      url-base: https://github.com/zmkfirmware
+      url-base: https://github.com/newx-it/zmk/tree/feat-ble-prevent-sleep-while-active-connected
     - name: urob
       url-base: https://github.com/urob
     - name: newx-it
