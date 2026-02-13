@@ -1,5 +1,4 @@
 #include "fingermap.h"
-#include <behaviors/rgbled_widget.dtsi>
 
 / {
 behaviors { // ---------------------------------------------------------------------------------
