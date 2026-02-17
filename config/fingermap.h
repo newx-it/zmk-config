@@ -13,15 +13,11 @@
 //----------------------------------------
 
 / { macros { //----------------------------------------------------------------------------------------------------
-		oa: oa 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = <	&macro_tap 		&kp O 			&kp A							   >; 	 };
 		uX: uX 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro-one-param"; #binding-cells = <1>; 
 						bindings = < &macro_tap &kp U >, <&macro_param_1to1>, < &macro_tap &kp MACRO_PLACEHOLDER >; };
 //-----------------------------------------------------------------------------------------------------------------
-		shd: shd  	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = <	&macro_tap 		&kp LS(HOME) 			&kp DEL					   >; 	 };
-		sed: sed  	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = <	&macro_tap 		&kp LS(END) 			&kp DEL					   >; 	 };
+		linedel: linedel  	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro-one-param"; #binding-cells = <1>; 
+						bindings = <&macro_param_1to1>, < &macro_tap &kp LS(MACRO_PLACEHOLDER) &kp DEL	   >; 	 };
 //-----------------------------------------------------------------------------------------------------------------
 		mail: mail 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
 						bindings = < 	&macro_tap &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M >;	 };
@@ -84,8 +80,8 @@ behaviors { //------------------------------------------------------------------
 		sk: sticky_key { 		release-after-ms = <750>; quick-release; 															};
 //------------------------------------------------------------------------------------------------------------------------------------
 		mage_rev: mage_rev { 	compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&key_repeat>;
-									akt_shd { trigger-keys = <BSPC>; bindings = <&shd>; };
-									akt_sed { trigger-keys = <DEL>; bindings = <&sed>; };
+									akt_shd { trigger-keys = <BSPC>; bindings = <&linedel HOME>; };
+									akt_sed { trigger-keys = <DEL>; bindings = <&linedel END>; };
 									akt_ctlx { trigger-keys = <LC(A)>; bindings = <&kp LC(X)>; };
 									akt_ctl_tw { trigger-keys = < LC(T) >; bindings = < &kp LC(W) >; 								};
 									akt_ctl_wt { trigger-keys = < LC(W) >; bindings = < &kp LC(T) >; 								};	
