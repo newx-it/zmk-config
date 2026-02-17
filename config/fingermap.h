@@ -30,7 +30,8 @@ macros {
 							<&macro_param_1to1>, <&macro_tap &kp 0 &kp SPACE>;	 								 };
 		XXleft: XXleft 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro-one-param"; 
 						#binding-cells = <1>; bindings = 
-							<&macro_param_1to1>, <&macro_param_1to2>, <&macro_tap &kp 0 &kp 0 &kp LEFT>; 	 	 };
+							<&macro_param_1to1>, <&macro_tap &kp 0 >
+							<&macro_param_1to1>, <&macro_tap &kp 0 &kp LEFT>; 	 	 							 };
 
 //---text insertion------------------------------------------------------------------------------------------------
 		mail: mail 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
