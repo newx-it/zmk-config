@@ -39,12 +39,6 @@ macros {
 		edu: edu 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
 						bindings = < 	&macro_tap &kp I &kp S &kp U &kp DOT &kp E &kp D &kp U 			   >;	 };
 
-//---symbol insertion----------------------------------------------------------------------------------------------
-		quo: quo 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = < 	&macro_tap 		&kp DQT 		&kp DQT 		&kp LEFT  		   >; 	 };
-		apo: apo 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = < 	&macro_tap 		&kp APOS 		&kp APOS 		&kp LEFT  		   >; 	 };
-
 //---game stuff----------------------------------------------------------------------------------------------------
 		gameX: gameX 	{ wait-ms = <5>; tap-ms = <20>; compatible = "zmk,behavior-macro-one-param"; 
 						#binding-cells = <1>; bindings = 
