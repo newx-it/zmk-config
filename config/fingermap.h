@@ -74,7 +74,7 @@ behaviors {
 		amt: a_mod_tap 				{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
 										tapping-term-ms = <150>; bindings = <&kp>, <&kp>; display-name = "a-mod-Tap"; 				};
 		bmt: b_mod_tap 				{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-										tapping-term-ms = <300>; bindings = <&kp>, <&kp>; display-name = "b-mod-Tap"; 				};
+										tapping-term-ms = <225>; bindings = <&kp>, <&kp>; display-name = "b-mod-Tap"; 				};
 		XXleftmt: XXleft_mod_tap 	{ compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
 										tapping-term-ms = <150>; bindings = <&XXleft>, <&kp>; display-name = "XXleft mod-Tap"; 		};
 		Xspacemt: Xspace_mod_tap 	{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
