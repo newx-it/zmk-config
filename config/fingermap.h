@@ -28,9 +28,9 @@ macros {
 		Xspace: Xspace 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro-one-param"; 
 						#binding-cells = <1>; bindings = 
 							<&macro_param_1to1>, <&macro_tap &kp 0 &kp SPACE>;	 								 };
-		XYleft: XYleft 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro-two-param"; 
+		XXleft: XXleft 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro-two-param"; 
 						#binding-cells = <2>; bindings = 
-							<&macro_param_1to1>, <&macro_param_2to2>, <&macro_tap &kp 0 &kp 0 &kp LEFT>; 	 	 };
+							<&macro_param_1to1>, <&macro_param_1to2>, <&macro_tap &kp 0 &kp 0 &kp LEFT>; 	 	 };
 
 //---text insertion------------------------------------------------------------------------------------------------
 		mail: mail 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
@@ -86,11 +86,8 @@ behaviors {
 									tapping-term-ms = <150>; bindings = <&quo>, <&kp>; display-name = "quo mod-Tap"; 	};
 		apomt: apo_mod_tap { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
 									tapping-term-ms = <150>; bindings = <&apo>, <&kp>; display-name = "apo mod-Tap"; 				};
-		dspmt: dsp_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&Xspace DOT>, <&kp>; display-name = "dsp mod-Tap"; 		};
-		cspmt: csp_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&Xspace COMMA>, <&kp>; display-name = "csp mod-Tap"; 		};
-
+		Xspacemt: Xspace_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&Xspace>, <&kp>; display-name = "Xspace mod-Tap"; 		};
 //---magic----------------------------------------------------------------------------------------------------------------------------
 		mage_rev: mage_rev { 	compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&key_repeat>;
 									akt_shift_home_del { trigger-keys = <BSPC>; bindings = < &shiftXdel HOME >; 					};
@@ -212,7 +209,7 @@ behaviors {
 			#define _1b1 	&kp LSHIFT
 			#define _1b2 	&kp LS(COMMA)
 			#define _1b3 	&quomt 0 DQT
-			#define _1b4 	&cspmt 0 COMMA
+			#define _1b4 	&Xspace COMMA COMMA
 			#define _1b5 	&none
 	
 	// right hand
@@ -232,7 +229,7 @@ behaviors {
 			#define _1h11	&amt RC(BSPC) 	BSPC
 		// bottom row
 			#define _1b6 	&none
-			#define _1b7 	&dspmt 0 DOT
+			#define _1b7 	&Xspace DOT DOT
 			#define _1b8 	&apomt 0 APOS
 			#define _1b9 	&kp LS(DOT)
 			#define _1b10	&kp RSHIFT
