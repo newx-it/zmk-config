@@ -204,7 +204,7 @@ behaviors {
 			#define _1b1 	&kp LSHIFT
 			#define _1b2 	&kp LS(COMMA)
 			#define _1b3 	&XXleftmt DQT DQT
-			#define _1b4 	&Xspace COMMA COMMA
+			#define _1b4 	&Xspacemt COMMA COMMA
 			#define _1b5 	&none
 	
 	// right hand
@@ -224,7 +224,7 @@ behaviors {
 			#define _1h11	&amt RC(BSPC) 	BSPC
 		// bottom row
 			#define _1b6 	&none
-			#define _1b7 	&Xspace DOT DOT
+			#define _1b7 	&Xspacemt DOT DOT
 			#define _1b8 	&XXleftmt APOS APOS
 			#define _1b9 	&kp LS(DOT)
 			#define _1b10	&kp RSHIFT
