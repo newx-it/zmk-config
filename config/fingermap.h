@@ -28,8 +28,8 @@ macros {
 		Xspace: Xspace 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro-one-param"; 
 						#binding-cells = <1>; bindings = 
 							<&macro_param_1to1>, <&macro_tap &kp 0 &kp SPACE>;	 								 };
-		XXleft: XXleft 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro-two-param"; 
-						#binding-cells = <2>; bindings = 
+		XXleft: XXleft 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro-one-param"; 
+						#binding-cells = <1>; bindings = 
 							<&macro_param_1to1>, <&macro_param_1to2>, <&macro_tap &kp 0 &kp 0 &kp LEFT>; 	 	 };
 
 //---text insertion------------------------------------------------------------------------------------------------
@@ -82,12 +82,10 @@ behaviors {
 //---specific modtaps-----------------------------------------------------------------------------------------------------------------
 		mage_tap: mage_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
 								  tapping-term-ms = <150>; bindings = <&mage_rev>, <&mage_rep>; display-name = "mage-mod-Tap"; 		};
-		quomt: quo_mod_tap { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&quo>, <&kp>; display-name = "quo mod-Tap"; 	};
-		apomt: apo_mod_tap { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&apo>, <&kp>; display-name = "apo mod-Tap"; 				};
+		XXleftmt: XXleft_mod_tap { 	compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&XXleft>, <&kp>; display-name = "XXleft mod-Tap"; 			};
 		Xspacemt: Xspace_mod_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&Xspace>, <&kp>; display-name = "Xspace mod-Tap"; 		};
+									tapping-term-ms = <150>; bindings = <&Xspace>, <&kp>; display-name = "Xspace mod-Tap"; 			};
 //---magic----------------------------------------------------------------------------------------------------------------------------
 		mage_rev: mage_rev { 	compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&key_repeat>;
 									akt_shift_home_del { trigger-keys = <BSPC>; bindings = < &shiftXdel HOME >; 					};
@@ -116,12 +114,8 @@ behaviors {
 									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uX O>; }; 					};
 
 //---game stuff-----------------------------------------------------------------------------------------------------------------------
-		gbmt: gb_mod_tap { 		compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&kp>, <&gameX G>; display-name = "gb mod-Tap"; 			};
-		xzmt: xz_mod_tap { 		compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&kp>, <&gameX X>; display-name = "xz mod-Tap"; 			};
-		cvmt: cv_mod_tap { 		compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
-									tapping-term-ms = <150>; bindings = <&kp>, <&gameX C>; display-name = "cv mod-Tap"; 	  }; }; };
+		gameXmt: gameX_mod_tap { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
+									tapping-term-ms = <150>; bindings = <&kp>, <&gameX>; display-name = "gameX mod-Tap"; 	  }; }; };
 //------------------------------------------------------------------------------------------------------------------------------------
 
 //
@@ -208,7 +202,7 @@ behaviors {
 			#define _1b0 	&amt LC(BSPC) 	BSPC
 			#define _1b1 	&kp LSHIFT
 			#define _1b2 	&kp LS(COMMA)
-			#define _1b3 	&quomt 0 DQT
+			#define _1b3 	&XXleftmt DQT DQT
 			#define _1b4 	&Xspace COMMA COMMA
 			#define _1b5 	&none
 	
@@ -230,7 +224,7 @@ behaviors {
 		// bottom row
 			#define _1b6 	&none
 			#define _1b7 	&Xspace DOT DOT
-			#define _1b8 	&apomt 0 APOS
+			#define _1b8 	&XXleftmt APOS APOS
 			#define _1b9 	&kp LS(DOT)
 			#define _1b10	&kp RSHIFT
 			#define _1b11	&amt RC(DEL) 	DEL
@@ -488,13 +482,13 @@ behaviors {
 			#define _6h2 	&socd A
 			#define _6h3 	&kp W
 			#define _6h4 	&socd D
-			#define _6h5 	&gbmt B 0
+			#define _6h5 	&gameXmt B G
 		// bottom row
 			#define _6b0 	&amt LC(BSPC) 	BSPC
 			#define _6b1 	&kp LSHIFT
-			#define _6b2 	&xzmt Z 0
+			#define _6b2 	&gameXmt Z X
 			#define _6b3 	&kp S
-			#define _6b4 	&cvmt V 0
+			#define _6b4 	&gameXmt V C
 			#define _6b5 	&none
 	
 	// right hand
