@@ -13,11 +13,17 @@
 //----------------------------------------
 
 / { macros { //----------------------------------------------------------------------------------------------------
-		uX: uX 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro-one-param"; #binding-cells = <1>; 
-						bindings = < &macro_tap &kp U >, <&macro_param_1to1>, < &macro_tap &kp MACRO_PLACEHOLDER >; };
+		uX: uX 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro-one-param"; 
+   						#binding-cells = <1>; bindings = 
+   							<&macro_tap &kp U>, 
+							<&macro_param_1to1>, < &macro_tap &kp MACRO_PLACEHOLDER >; 							 };
 //-----------------------------------------------------------------------------------------------------------------
-		linedel: linedel  	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro-one-param"; #binding-cells = <1>; 
-						bindings = <&macro_param_1to1>, < &macro_tap &kp LS(MACRO_PLACEHOLDER) &kp DEL	   >; 	 };
+		linedel: linedel { wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro-one-param"; 
+						#binding-cells = <1>; bindings = 
+							<&macro_press &kp LSHIFT>,
+							<&macro_param_1to1>, <&macro_tap &kp MACRO_PLACEHOLDER>,
+							<&macro_release &kp LSHIFT>,
+							<&macro_tap &kp DEL>; 	 															 };
 //-----------------------------------------------------------------------------------------------------------------
 		mail: mail 	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
 						bindings = < 	&macro_tap &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M >;	 };
