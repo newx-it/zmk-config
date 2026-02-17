@@ -43,7 +43,7 @@
 //-----------------------------------------------------------------------------------------------------------------
 		gameX: gameX 	{ wait-ms = <5>; tap-ms = <20>; compatible = "zmk,behavior-macro-one-param"; 
 						#binding-cells = <1>; bindings = 
-							<&macro_param_1to1>, <&macro_tap &kp 0>;	 						 				 };
+							<&macro_param_1to1>, <&macro_tap &kp 0>;	 						 			  }; };
 //-----------------------------------------------------------------------------------------------------------------
 
 behaviors { //------------------------------------------------------------------------------------------------------------------------
@@ -73,20 +73,20 @@ behaviors { //------------------------------------------------------------------
 		sk: sticky_key { 		release-after-ms = <750>; quick-release; 															};
 //------------------------------------------------------------------------------------------------------------------------------------
 		mage_rev: mage_rev { 	compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&key_repeat>;
-									akt_shift_home_del { trigger-keys = <BSPC>; bindings = <&shiftXdel HOME>; 						};
-									akt_shift_end_del { trigger-keys = <DEL>; bindings = <&shiftXdel END>; 							};
-									akt_ctlx { trigger-keys = <LC(A)>; bindings = <&kp LC(X)>; };
+									akt_shift_home_del { trigger-keys = <BSPC>; bindings = < &shiftXdel HOME >; 					};
+									akt_shift_end_del { trigger-keys = <DEL>; bindings = < &shiftXdel END >; 						};
+									akt_ctlx { trigger-keys = <LC(A)>; bindings = < &kp LC(X) >; 									};
 									akt_ctl_tw { trigger-keys = < LC(T) >; bindings = < &kp LC(W) >; 								};
 									akt_ctl_wt { trigger-keys = < LC(W) >; bindings = < &kp LC(T) >; 								};	
 									akt_ctl_zy { trigger-keys = < LC(Z) >; bindings = < &kp LC(Y) >; 								};
 									akt_ctl_yz { trigger-keys = < LC(Y) >; bindings = < &kp LC(Z) >; 								};
-									akt_edu { trigger-keys = <AT>; bindings = <&edu>; };											};
+									akt_edu { trigger-keys = <AT>; bindings = <&edu>; 											 }; };
 		mage_rep: mage_rep { 	compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&key_repeat>;
-									akt_ctlc { trigger-keys = <LC(A)>; bindings = <&kp LC(C)>; };
-									akt_ctlv { trigger-keys = <LC(C) LC(X) PSCRN>; bindings = <&kp LC(V)>; };
-									akt_mail { trigger-keys = <AT>; bindings = <&mail>; };
-									akt_yi { trigger-keys = <Y>; max-prior-idle-ms = <300>; bindings = <&kp I>; };
-            						akt_ji { trigger-keys = <J>; max-prior-idle-ms = <300>; bindings = <&kp I>; }; 					};
+									akt_ctlc { trigger-keys = <LC(A)>; bindings = <&kp LC(C)>; 										};
+									akt_ctlv { trigger-keys = <LC(C) LC(X) PSCRN>; bindings = <&kp LC(V)>; 							};
+									akt_mail { trigger-keys = <AT>; bindings = <&mail>; 											};
+									akt_yi { trigger-keys = <Y>; max-prior-idle-ms = <300>; bindings = <&kp I>; 					};
+            						akt_ji { trigger-keys = <J>; max-prior-idle-ms = <300>; bindings = <&kp I>; 				 }; };
 		mage_w: mage_w { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&bmt LS(W) W>;
 									akt_gs { trigger-keys = <G>; max-prior-idle-ms = <300>; bindings = <&kp S>; }; 					};
 		mage_e: mage_e { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&bmt LS(E) E>;
