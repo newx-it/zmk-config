@@ -15,14 +15,8 @@
 / { macros { //----------------------------------------------------------------------------------------------------
 		oa: oa 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
 						bindings = <	&macro_tap 		&kp O 			&kp A							   >; 	 };
-		ue: ue 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = <	&macro_tap 		&kp U 			&kp E					  		   >;    };
-		ua: ua 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = <	&macro_tap 		&kp U 			&kp A					  		   >;    };
-		ui: ui 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = <	&macro_tap 		&kp U 			&kp I					  		   >;    };
-		uo: uo 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
-						bindings = <	&macro_tap 		&kp U 			&kp O					  		   >; 	 };
+		uX: uX 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro-one-param"; #binding-cells = <1>; 
+						bindings = <	&macro_tap 		&kp U 			&kp MACRO_PLACEHOLDER	  	  	   >;    };
 //-----------------------------------------------------------------------------------------------------------------
 		shd: shd  	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
 						bindings = <	&macro_tap 		&kp LS(HOME) 			&kp DEL					   >; 	 };
@@ -93,10 +87,10 @@ behaviors { //------------------------------------------------------------------
 									akt_shd { trigger-keys = <BSPC>; bindings = <&shd>; };
 									akt_sed { trigger-keys = <DEL>; bindings = <&sed>; };
 									akt_ctlx { trigger-keys = <LC(A)>; bindings = <&kp LC(X)>; };
-									akt_ctl_tw { trigger-keys = < LC(T) >; max-prior-idle-ms = <300>; bindings = < &kp LC(W) >; };
-									akt_ctl_wt { trigger-keys = < LC(W) >; max-prior-idle-ms = <300>; bindings = < &kp LC(T) >; };	
-									akt_ctl_zy { trigger-keys = < LC(Z) >; max-prior-idle-ms = <300>; bindings = < &kp LC(Y) >; };
-									akt_ctl_yz { trigger-keys = < LC(Y) >; max-prior-idle-ms = <300>; bindings = < &kp LC(Z) >; };
+									akt_ctl_tw { trigger-keys = < LC(T) >; bindings = < &kp LC(W) >; 								};
+									akt_ctl_wt { trigger-keys = < LC(W) >; bindings = < &kp LC(T) >; 								};	
+									akt_ctl_zy { trigger-keys = < LC(Z) >; bindings = < &kp LC(Y) >; 								};
+									akt_ctl_yz { trigger-keys = < LC(Y) >; bindings = < &kp LC(Z) >; 								};
 									akt_edu { trigger-keys = <AT>; bindings = <&edu>; };											};
 		mage_rep: mage_rep { 	compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&key_repeat>;
 									akt_ctlc { trigger-keys = <LC(A)>; bindings = <&kp LC(C)>; };
@@ -107,13 +101,13 @@ behaviors { //------------------------------------------------------------------
 		mage_w: mage_w { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&bmt LS(W) W>;
 									akt_gs { trigger-keys = <G>; max-prior-idle-ms = <300>; bindings = <&kp S>; }; 					};
 		mage_e: mage_e { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&bmt LS(E) E>;
-									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&ue>; }; 					};
+									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uX E>; }; 					};
 		mage_a: mage_a { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&bmt LS(A) A>;
-									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&ua>; }; 					};
+									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uX A>; }; 					};
 		mage_i: mage_i { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&bmt LS(I) I>;
-									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&ui>; }; 					};
+									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uX I>; }; 					};
 		mage_o: mage_o { 		compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&bmt LS(O) O>;
-									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uo>; }; 					};
+									akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uX O>; }; 					};
 //------------------------------------------------------------------------------------------------------------------------------------
 		mage_tap: mage_tap { 	compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
 								  tapping-term-ms = <150>; bindings = <&mage_rev>, <&mage_rep>; display-name = "mage-mod-Tap"; 		};
