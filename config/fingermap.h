@@ -16,7 +16,7 @@
 		oa: oa 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
 						bindings = <	&macro_tap 		&kp O 			&kp A							   >; 	 };
 		uX: uX 		{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro-one-param"; #binding-cells = <1>; 
-						bindings = <	&macro_tap 		&kp U 			&kp MACRO_PLACEHOLDER	  	  	   >;    };
+						bindings = <&macro_param_1to1>, <	&macro_tap 		&kp U 			&kp MACRO_PLACEHOLDER >;    };
 //-----------------------------------------------------------------------------------------------------------------
 		shd: shd  	{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; #binding-cells = <0>; 
 						bindings = <	&macro_tap 		&kp LS(HOME) 			&kp DEL					   >; 	 };
