@@ -45,6 +45,10 @@ macros {
 		gameX: gameX 			{ wait-ms = <5>; tap-ms = <20>; compatible = "zmk,behavior-macro-one-param"; 
 									#binding-cells = <1>; bindings = 
 										<&macro_param_1to1>, <&macro_tap &kp 0>;	 						   }; };
+		gamespaceshift: gamespaceshift 	{ wait-ms = <3>; tap-ms = <1>; compatible = "zmk,behavior-macro"; 
+									#binding-cells = <0>; bindings = 
+										<&macro_tap &kp SPACE &kp LSHIFT>;	 						   		   }; };
+		
 //-----------------------------------------------------------------------------------------------------------------
 
 behaviors { 
@@ -506,7 +510,7 @@ behaviors {
 			#define _6b6 	&none
 			#define _6b7 	&kp C_VOL_DN
 			#define _6b8 	&kp C_VOL_UP
-			#define _6b9 	&kp F8
+			#define _6b9 	&gamespaceshift
 			#define _6b10	&kp RSHIFT
 			#define _6b11	&amt RC(DEL) 	DEL
 
