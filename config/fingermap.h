@@ -510,7 +510,7 @@ behaviors {
 			#define _6b6 	&none
 			#define _6b7 	&kp C_VOL_DN
 			#define _6b8 	&kp C_VOL_UP
-			#define _6b9 	&gamespaceshift
+			#define _6b9 	&kp F8
 			#define _6b10	&kp RSHIFT
 			#define _6b11	&amt RC(DEL) 	DEL
 
