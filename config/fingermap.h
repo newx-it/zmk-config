@@ -478,7 +478,7 @@ behaviors {
 			#define _6h2 	&socd A
 			#define _6h3 	&kp W
 			#define _6h4 	&socd D
-			#define _6h5 	&gameXmt B G
+			#define _6h5 	&gameXmt K G
 		// bottom row
 			#define _6b0 	&amt LC(BSPC) 	BSPC
 			#define _6b1 	&kp LSHIFT
