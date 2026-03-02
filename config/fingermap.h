@@ -44,7 +44,7 @@ macros {
 //---game stuff----------------------------------------------------------------------------------------------------
 		gameX: gameX 			{ wait-ms = <5>; tap-ms = <20>; compatible = "zmk,behavior-macro-one-param"; 
 									#binding-cells = <1>; bindings = 
-										<&macro_param_1to1>, <&macro_tap &kp 0>;	 						   }; };
+										<&macro_param_1to1>, <&macro_tap &kp 0>;	 						      };
 		gamespaceshift: gamespaceshift 	{ wait-ms = <3>; tap-ms = <1>; compatible = "zmk,behavior-macro"; 
 									#binding-cells = <0>; bindings = 
 										<&macro_tap &kp SPACE &kp LSHIFT>;	 						   		   }; };
