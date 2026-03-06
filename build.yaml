@@ -5,12 +5,12 @@
 # pass flags to the build command, `snippet` to add a Zephyr snippet, and
 # `artifact-name` to assign a name to distinguish build outputs from each other:
 #
-# board: [ "seeed_xiao_ble", "nice_nano_v2" ]
+# board: [ "seeed_xiao_ble", "nice_nano//zmk" ]
 # shield: [ "twenny_left", "twenny_right", "twenny_dongle", "lebroke", "ocarina", "pocketpilot", "wakizashi", "pueo_left", "pueo_right", "swagboard_left", "swagboard_right" ]
 #
 #  - board: xiao_ble//zmk
 #    shield: settings_reset
-#  - board: nice_nano_v2
+#  - board: nice_nano//zmk
 #    shield: settings_reset
 #
 #
@@ -19,17 +19,17 @@
 #    snippet: studio-rpc-usb-uart
 #    cmake-args: -DCONFIG_ZMK_STUDIO=y
 #
-#  - board: nice_nano_v2
+#  - board: nice_nano//zmk
 #    shield: lebroke
 #    snippet: studio-rpc-usb-uart
 #    cmake-args: -DCONFIG_ZMK_STUDIO=y
 #
-#  - board: nice_nano_v2
+#  - board: nice_nano//zmk
 #    shield: ocarina
 #    snippet: studio-rpc-usb-uart
 #    cmake-args: -DCONFIG_ZMK_STUDIO=y
 #
-#  - board: nice_nano_v2
+#  - board: nice_nano//zmk
 #    shield: wakizashi
 #    snippet: studio-rpc-usb-uart
 #    cmake-args: -DCONFIG_ZMK_STUDIO=y
@@ -44,14 +44,14 @@
 #   shield: twenny_right
 #   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 #
-# - board: nice_nano_v2
+# - board: nice_nano//zmk
 #   shield: pueo_dongle
 #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-# - board: nice_nano_v2
+# - board: nice_nano//zmk
 #   shield: pueo_left
 #   snippet: studio-rpc-usb-uart
 #   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-# - board: nice_nano_v2
+# - board: nice_nano//zmk
 #   shield: pueo_right
 #   snippet: studio-rpc-usb-uart
 #   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
@@ -59,10 +59,10 @@
 # - board: xiao_ble//zmk
 #   shield: swagboard_dongle nice_swagboard nice_epaper
 #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-# - board: nice_nano_v2
+# - board: nice_nano//zmk
 #   shield: swagboard_left nice_swagboard nice_epaper
 #   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-# - board: nice_nano_v2
+# - board: nice_nano//zmk
 #   shield: swagboard_right nice_swagboard nice_epaper
 #   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 ---
@@ -70,3 +70,11 @@ include:
  - board: xiao_ble//zmk
    shield: pueo_dongle
    cmake-args: -DCONFIG_ZMK_STUDIO=y
+ - board: nice_nano//zmk
+   shield: pueo_left
+   snippet: studio-rpc-usb-uart
+   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+ - board: nice_nano//zmk
+   shield: pueo_right
+   snippet: studio-rpc-usb-uart
+   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
