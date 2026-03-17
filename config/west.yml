@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/newx-it
     - name: nguyendown
       url-base: https://github.com/nguyendown
+    - name: dhruvinsh
+      url-base: https://github.com/dhruvinsh
   projects:
     - name: zmk
       remote: zmk
@@ -27,6 +29,9 @@ manifest:
       revision: main
     - name: zmk-behavior-socd
       remote: nguyendown
+      revision: main
+    - name: zmk-tri-state
+      remote: dhruvinsh
       revision: main
   self:
     path: config
