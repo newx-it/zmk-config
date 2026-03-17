@@ -118,7 +118,7 @@ behaviors {
             label = "SWAPPER";
             #binding-cells = <0>;
             bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-            ignored-key-positions = <1>;
+            ignored-key-positions = <0 2 5 7>;
         };
 //---game stuff-----------------------------------------------------------------------------------------------------------------------
 		gameXmt: gameX_mod_tap 	{ compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
