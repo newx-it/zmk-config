@@ -112,7 +112,13 @@ behaviors {
 								akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uX I>; }; 						};
 		mage_o: mage_o 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&bmt LS(O) O>;
 								akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uX O>; }; 						};
-
+		ezalttab: ezalttab {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            ignored-key-positions = <1>;
+        };
 //---game stuff-----------------------------------------------------------------------------------------------------------------------
 		gameXmt: gameX_mod_tap 	{ compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "tap-preferred"; 
 									tapping-term-ms = <150>; bindings = <&kp>, <&gameX>; display-name = "gameX mod-Tap"; 	  }; }; };
