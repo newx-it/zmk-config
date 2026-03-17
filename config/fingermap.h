@@ -83,7 +83,8 @@ behaviors {
 										tapping-term-ms = <150>; bindings = <&XXleft>, <&kp>; display-name = "XXleft mod-Tap"; 		};
 		Xspacemt: Xspace_mod_tap 	{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
 										tapping-term-ms = <150>; bindings = <&Xspace>, <&kp>; display-name = "Xspace mod-Tap"; 		};
-
+		tabmt: tabmt 				{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
+										tapping-term-ms = <150>; bindings = <&ezalttab>, <&kp>; display-name = "ezalttab modtap"; 	};
 //---magic----------------------------------------------------------------------------------------------------------------------------
 		mage_tap: mage_tap 			{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
 								  		tapping-term-ms = <150>; bindings = <&mage_rev>, <&mage_rep>; display-name = "mage-mod-Tap";};
