@@ -308,8 +308,8 @@ behaviors {
 		// top row
 			#define _3t0 	&kp TAB
 			#define _3t1 	&none
-			#define _3t2 	&none
-			#define _3t3 	&none
+			#define _3t2 	&bt BT_SEL 0
+			#define _3t3 	&bapp
 			#define _3t4 	&none
 			#define _3t5 	&none
 		// home row
@@ -331,8 +331,8 @@ behaviors {
 		// top row
 			#define _3t6 	&none
 			#define _3t7 	&none
-			#define _3t8 	&none
-			#define _3t9 	&none
+			#define _3t8 	&bapp
+			#define _3t9 	&bt BT_SEL 1
 			#define _3t10 	&none
 			#define _3t11 	&kp ESC
 		// home row
