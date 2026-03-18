@@ -3,6 +3,7 @@
 #include <behaviors/socd.dtsi>
 #include <behaviors/unicode.dtsi>
 #include <behaviors/num_word.dtsi>
+#include <behaviors/battery_percentage_printer.dtsi>
 //----------------------------------------
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
