@@ -311,7 +311,7 @@ behaviors {
 			#define _3t1 	&none
 			#define _3t2 	&bt BT_SEL 0
 			#define _3t3 	&bapp
-			#define _3t4 	&none
+			#define _3t4 	&out OUT_BLE
 			#define _3t5 	&none
 		// home row
 			#define _3h0 	&amt LC(DEL) 	DEL
@@ -331,7 +331,7 @@ behaviors {
 	// right hand
 		// top row
 			#define _3t6 	&none
-			#define _3t7 	&none
+			#define _3t7 	&out OUT_USB
 			#define _3t8 	&bapp
 			#define _3t9 	&bt BT_SEL 1
 			#define _3t10 	&none
