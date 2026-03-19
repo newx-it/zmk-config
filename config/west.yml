@@ -15,7 +15,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmk
-      revision: feat-ble-prevent-sleep-while-active-connected
+      revision: feat-ble-prevent-sleep-feat-usb-allow-sleep
       import: app/west.yml
     - name: zmk-auto-layer
       remote: urob
