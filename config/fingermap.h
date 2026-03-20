@@ -104,15 +104,15 @@ behaviors {
 								akt_mail { trigger-keys = <AT>; bindings = <&mail>; 												};
 								akt_yi { trigger-keys = <Y>; max-prior-idle-ms = <300>; bindings = <&kp I>; 						};
             					akt_ji { trigger-keys = <J>; max-prior-idle-ms = <300>; bindings = <&kp I>; 					 }; };
-		mage_w: mage_w 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&bmt LS(W) W>;
+		mage_w: mage_w 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&kp W>;
 								akt_gs { trigger-keys = <G>; max-prior-idle-ms = <300>; bindings = <&kp S>; }; 						};
-		mage_e: mage_e 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&bmt LS(E) E>;
+		mage_e: mage_e 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&kp E>;
 								akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uX E>; }; 						};
-		mage_a: mage_a 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&bmt LS(A) A>;
+		mage_a: mage_a 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&kp A>;
 								akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uX A>; }; 						};
-		mage_i: mage_i 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&bmt LS(I) I>;
+		mage_i: mage_i 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&kp I>;
 								akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uX I>; }; 						};
-		mage_o: mage_o 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&bmt LS(O) O>;
+		mage_o: mage_o 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&kp O>;
 								akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uX O>; }; 						};
 		ezalttab: ezalttab {
             compatible = "zmk,behavior-tri-state";
@@ -137,46 +137,46 @@ behaviors {
 	// left hand
 		// top row
 			#define _0t0 	&kp TAB
-			#define _0t1 	&bmt LS(V) V
-			#define _0t2 	&bmt LS(Y) Y
+			#define _0t1 	&kp V
+			#define _0t2 	&kp Y
 			#define _0t3 	&mage_o
-			#define _0t4 	&bmt LS(U) U
-			#define _0t5 	&bmt LS(Q) Q
+			#define _0t4 	&kp U
+			#define _0t5 	&kp Q
 		// home row
 			#define _0h0 	&bmt LC(DEL) DEL
-			#define _0h1 	&bmt LS(C) C
+			#define _0h1 	&kp C
 			#define _0h2 	&mage_i
 			#define _0h3 	&mage_a
 			#define _0h4 	&mage_e
-			#define _0h5 	&bmt LS(Z) Z
+			#define _0h5 	&kp Z
 		// bottom row
 			#define _0b0 	&bmt LC(BSPC) BSPC
 			#define _0b1 	&kp LSHIFT
-			#define _0b2 	&bmt LS(J) J
-			#define _0b3 	&bmt LS(X) X
+			#define _0b2 	&kp J
+			#define _0b3 	&kp X
 			#define _0b4 	&mage_tap 0 0
 			#define _0b5 	&none
 	
 	// right hand
 		// top row
-			#define _0t6 	&bmt LS(P) P
-			#define _0t7 	&bmt LS(D) D
-			#define _0t8 	&bmt LS(L) L
-			#define _0t9 	&bmt LS(F) F
-			#define _0t10 	&bmt LS(B) B
+			#define _0t6 	&kp P
+			#define _0t7 	&kp D
+			#define _0t8 	&kp L
+			#define _0t9 	&kp F
+			#define _0t10 	&kp B
 			#define _0t11 	&kp ESC
 		// home row
-			#define _0h6 	&bmt LS(K) K
-			#define _0h7 	&bmt LS(T) T
-			#define _0h8 	&bmt LS(H) H
-			#define _0h9 	&bmt LS(S) S
-			#define _0h10	&bmt LS(N) N
+			#define _0h6 	&kp K
+			#define _0h7 	&kp T
+			#define _0h8 	&kp H
+			#define _0h9 	&kp S
+			#define _0h10	&kp N
 			#define _0h11	&amt RC(BSPC) BSPC
 		// bottom row
 			#define _0b6 	&none
 			#define _0b7 	&mage_w
-			#define _0b8 	&bmt LS(M) M
-			#define _0b9 	&bmt LS(G) G
+			#define _0b8 	&kp M
+			#define _0b9 	&kp G
 			#define _0b10	&kp RSHIFT
 			#define _0b11	&amt RC(DEL) DEL
 
