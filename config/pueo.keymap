@@ -100,8 +100,8 @@ combos { compatible = "zmk,combos";
 		cbo_fkeys_l			{ timeout-ms = <40>; 	key-positions = < 	8 11		>; 	bindings = <	&sl 3				>; 	layers = <	0 1 2	>; 	};
 		cbo_fkeys_r 		{ timeout-ms = <40>; 	key-positions = < 	14 17		>; 	bindings = <	&sl 3				>; 	layers = <	0 1 2	>; 	};
 		// special ---------------------------------------------------------------------------------------------------------------------------------------
-		cbo_numword 		{ timeout-ms = <40>; 	key-positions = < 	0 24		>; 	bindings = <	&num_word 1			>;  layers = <	0 1 2	>; 	};
-		cbo_capsword 		{ timeout-ms = <40>; 	key-positions = < 	7 25		>; 	bindings = <	&cmt CAPS 0			>;  layers = <	0 1 2	>; 	};
+		cbo_numword 		{ timeout-ms = <20>; 	key-positions = < 	8 11		>; 	bindings = <	&num_word 1			>;  layers = <	0 1 2	>; 	};
+		cbo_capsword 		{ timeout-ms = <20>; 	key-positions = < 	13 16		>; 	bindings = <	&cmt CAPS 0			>;  layers = <	0 1 2	>; 	};
 		// game ------------------------------------------------------------------------------------------------------------------------------------------
 		g_cbo_tab 			{ timeout-ms = <50>; 	key-positions = < 	0 2			>; 	bindings = <	&kp TAB				>; 	layers = <	4 5 6	>; 	};
 		g_cbo_esc 			{ timeout-ms = <50>; 	key-positions = < 	0 1 2		>; 	bindings = <	&kp ESC				>; 	layers = <	4 5 6	>; 	};
