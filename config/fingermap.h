@@ -115,7 +115,7 @@ behaviors {
 		mage_o: mage_o 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&kp O>;
 								akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uX O>; }; 						};
 		ezalttab: ezalttab 	{ compatible = "zmk,behavior-tri-state"; label = "SWAPPER"; #binding-cells = <0>;
-            					bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>; ignored-key-positions = <>;							};
+            					bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>; ignored-key-positions = <0 2 5 7>;					};
 		deadenter: deadenter { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; 
 								bindings = <&kp ENTER>, <&kp F24>; mods = <(MOD_LALT)>;												};
 //---game stuff-----------------------------------------------------------------------------------------------------------------------
