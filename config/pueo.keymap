@@ -87,8 +87,8 @@ combos { compatible = "zmk,combos";
 		cbo_enter_r			{ timeout-ms = <20>; 	key-positions = < 	15 16		>; 	bindings = <	&amt RS(RET) RET	>; 	layers = <	0 1 2	>; 	};
 		// arrows ----------------------------------------------------------------------------------------------------------------------------------------
 		cbo_left 			{ timeout-ms = <40>; 	key-positions = < 	10 14		>; 	bindings = <	&amt LC(LEFT)  LEFT	>; 	layers = <	0		>;	};
-		cbo_up 				{ timeout-ms = <40>; 	key-positions = < 	1 6			>;	bindings = <	&amt LC(UP)    UP	>; 	layers = <	0		>;	};
-		cbo_down 			{ timeout-ms = <40>; 	key-positions = < 	2 5			>; 	bindings = <	&amt LC(DOWN)  DOWN	>; 	layers = <	0		>;	};
+		cbo_up 				{ timeout-ms = <40>; 	key-positions = < 	19 22		>;	bindings = <	&amt LC(UP)    UP	>; 	layers = <	0		>;	};
+		cbo_down 			{ timeout-ms = <40>; 	key-positions = < 	20 21		>; 	bindings = <	&amt LC(DOWN)  DOWN	>; 	layers = <	0		>;	};
 		cbo_right 			{ timeout-ms = <40>; 	key-positions = < 	11 15		>; 	bindings = <	&amt LC(RIGHT) RIGHT>;	layers = <	0		>;	};
 		// layers ----------------------------------------------------------------------------------------------------------------------------------------
 		cbo_default 		{ timeout-ms = <40>;	key-positions = < 	10 11 14 15	>;	bindings = <	&to 0				>; 							};
