@@ -280,8 +280,8 @@ behaviors {
 			#define _2h6 	&none
 			#define _2h7 	&amt LC(LEFT) 	LEFT	
 			#define _2h8 	&amt LC(RIGHT) 	RIGHT	
-			#define _2h9 	&amt END		
-			#define _2h10	&amt PGDN
+			#define _2h9 	&kp END		
+			#define _2h10	&kp PGDN
 			#define _2h11	&amt RC(BSPC) 	BSPC 
 		// bottom row
 			#define _2b6 	&none
