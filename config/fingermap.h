@@ -249,23 +249,23 @@ behaviors {
 		// top row
 			#define _2t0 	&kp TAB
 			#define _2t1 	&none
-			#define _2t2 	&mkp MB3
-			#define _2t3 	&mkp MB2
-			#define _2t4 	&mkp MB1
-			#define _2t5 	&mkp MB4
+			#define _2t2 	&none
+			#define _2t3 	&none
+			#define _2t4 	&none
+			#define _2t5 	&none
 		// home row
 			#define _2h0 	&none
-			#define _2h1 	&amt LC(T) LC(X)
-			#define _2h2 	&mmv MOVE_LEFT
-			#define _2h3 	&mmv MOVE_UP
-			#define _2h4 	&mmv MOVE_RIGHT
-			#define _2h5 	&mkp MB5
+			#define _2h1 	&kp PGUP
+			#define _2h2 	&kp HOME
+			#define _2h3 	&amt LC(UP) UP
+			#define _2h4 	&amt LC(DOWN) DOWN
+			#define _2h5 	&none
 		// bottom row
 			#define _2b0 	&amt LC(BSPC) 	BSPC
 			#define _2b1 	&kp LSHIFT
-			#define _2b2 	&amt LC(Z) LC(C)
-			#define _2b3 	&mmv MOVE_DOWN
-			#define _2b4 	&amt LC(Y) LC(V)
+			#define _2b2 	&none
+			#define _2b3 	&none
+			#define _2b4 	&none
 			#define _2b5 	&none
 	
 	// right hand
@@ -273,21 +273,21 @@ behaviors {
 			#define _2t6 	&kp C_PP
 			#define _2t7 	&kp C_PREV
 			#define _2t8 	&kp C_NEXT
-			#define _2t9 	&kp PGUP
+			#define _2t9 	&kp C_MUTE
 			#define _2t10 	&none
 			#define _2t11 	&kp ESC
 		// home row
-			#define _2h6 	&kp LA(LC(LG(LS(V)))) // earTrumpet flyout hotkey
+			#define _2h6 	&none
 			#define _2h7 	&amt LC(LEFT) 	LEFT	
-			#define _2h8 	&amt LC(UP) 	UP 			
-			#define _2h9 	&amt LC(DOWN) 	DOWN		
-			#define _2h10	&amt LC(RIGHT) 	RIGHT
+			#define _2h8 	&amt LC(RIGHT) 	RIGHT	
+			#define _2h9 	&amt END		
+			#define _2h10	&amt PGDN
 			#define _2h11	&amt RC(BSPC) 	BSPC 
 		// bottom row
 			#define _2b6 	&none
-			#define _2b7 	&kp HOME   		
-			#define _2b8 	&kp END 	 		
-			#define _2b9 	&kp PGDN
+			#define _2b7 	&none   		
+			#define _2b8 	&none 	 		
+			#define _2b9 	&none
 			#define _2b10	&kp RSHIFT
 			#define _2b11	&amt RC(DEL) 	DEL
 
