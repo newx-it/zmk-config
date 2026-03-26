@@ -257,8 +257,8 @@ behaviors {
 			#define _2h0 	&none
 			#define _2h1 	&kp PGUP
 			#define _2h2 	&kp HOME
-			#define _2h3 	&amt LC(UP) UP
-			#define _2h4 	&amt LC(DOWN) DOWN
+			#define _2h3 	&amt LC(LEFT) LEFT
+			#define _2h4 	&amt LC(RIGHT) RIGHT
 			#define _2h5 	&none
 		// bottom row
 			#define _2b0 	&amt LC(BSPC) 	BSPC
@@ -278,8 +278,8 @@ behaviors {
 			#define _2t11 	&kp ESC
 		// home row
 			#define _2h6 	&none
-			#define _2h7 	&amt LC(LEFT) 	LEFT	
-			#define _2h8 	&amt LC(RIGHT) 	RIGHT	
+			#define _2h7 	&amt LC(DOWN) 	DOWN	
+			#define _2h8 	&amt LC(UP) 	UP
 			#define _2h9 	&kp END		
 			#define _2h10	&kp PGDN
 			#define _2h11	&amt RC(BSPC) 	BSPC 
