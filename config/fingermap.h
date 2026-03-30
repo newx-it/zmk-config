@@ -134,33 +134,33 @@ behaviors {
 	// left hand
 		// top row
 			#define _0t0 	&kp TAB
-			#define _0t1 	&kp V
-			#define _0t2 	&kp Y
-			#define _0t3 	&mage_o
-			#define _0t4 	&kp U
-			#define _0t5 	&kp Q
+			#define _0t1 	&none
+			#define _0t2 	&kp X
+			#define _0t3 	&kp Q
+			#define _0t4 	&kp G
+			#define _0t5 	&kp W
 		// home row
 			#define _0h0 	&bmt LC(DEL) DEL
-			#define _0h1 	&kp C
-			#define _0h2 	&mage_i
-			#define _0h3 	&mage_a
-			#define _0h4 	&mage_e
-			#define _0h5 	&kp Z
+			#define _0h1 	&mage_i
+			#define _0h2 	&mage_a
+			#define _0h3 	&mage_e
+			#define _0h4 	&kp C
+			#define _0h5 	&mage_tap 0 0
 		// bottom row
 			#define _0b0 	&bmt LC(BSPC) BSPC
 			#define _0b1 	&kp LSHIFT
-			#define _0b2 	&kp J
-			#define _0b3 	&kp X
-			#define _0b4 	&mage_tap 0 0
+			#define _0b2 	&mage_o
+			#define _0b3 	&kp U
+			#define _0b4 	&kp Y
 			#define _0b5 	&none
 	
 	// right hand
 		// top row
-			#define _0t6 	&kp P
-			#define _0t7 	&kp D
-			#define _0t8 	&kp L
-			#define _0t9 	&kp F
-			#define _0t10 	&kp B
+			#define _0t6 	&kp M
+			#define _0t7 	&kp Z
+			#define _0t8 	&kp J
+			#define _0t9 	&kp V
+			#define _0t10 	&none
 			#define _0t11 	&kp ESC
 		// home row
 			#define _0h6 	&kp K
@@ -171,10 +171,10 @@ behaviors {
 			#define _0h11	&amt RC(BSPC) BSPC
 		// bottom row
 			#define _0b6 	&none
-			#define _0b7 	&mage_w
-			#define _0b8 	&kp M
-			#define _0b9 	&kp G
-			#define _0b10	&kp RSHIFT
+			#define _0b7 	&kp D
+			#define _0b8 	&kp L
+			#define _0b9 	&kp F
+			#define _0b10	&none
 			#define _0b11	&amt RC(DEL) DEL
 
 	// thumbfan
