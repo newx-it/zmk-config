@@ -145,13 +145,13 @@ behaviors {
 			#define _0h2 	&mage_a
 			#define _0h3 	&mage_e
 			#define _0h4 	&kp C
-			#define _0h5 	&mage_tap 0 0
+			#define _0h5 	&kp Y
 		// bottom row
 			#define _0b0 	&bmt LC(BSPC) BSPC
 			#define _0b1 	&kp LSHIFT
 			#define _0b2 	&mage_o
 			#define _0b3 	&kp U
-			#define _0b4 	&kp Y
+			#define _0b4 	&mage_tap 0 0
 			#define _0b5 	&none
 	
 	// right hand
