@@ -65,9 +65,30 @@
 # - board: nice_nano//zmk
 #   shield: swagboard_right nice_swagboard nice_epaper
 #   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+#
+# - board: xiao_ble//zmk
+#   shield: pueo_dongle prospector_adapter
+#   cmake-args: -DCONFIG_ZMK_STUDIO=y
+
 ---
 include:
+ - board: xiao_ble//zmk
+   shield: settings_reset
+ - board: nice_nano//zmk
+   shield: settings_reset
  - board: xiao_ble//zmk
    shield: pueo_dongle
    snippet: zmk-usb-logging
    cmake-args: -DCONFIG_ZMK_STUDIO=y
+ - board: xiao_ble//zmk
+   shield: pueo_dongle prospector_adapter
+   snippet: zmk-usb-logging
+   cmake-args: -DCONFIG_ZMK_STUDIO=y
+ - board: nice_nano//zmk
+   shield: pueo_left
+   snippet: studio-rpc-usb-uart
+   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+ - board: nice_nano//zmk
+   shield: pueo_right
+   snippet: studio-rpc-usb-uart
+   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
