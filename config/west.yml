@@ -12,6 +12,8 @@ manifest:
       url-base: https://github.com/dhruvinsh
     - name: badjeff
       url-base: https://github.com/badjeff
+    - name: carrefinho
+      url-base: https://github.com/carrefinho
   projects:
     - name: zmk
       remote: zmk
@@ -38,5 +40,8 @@ manifest:
     - name: zmk-behavior-battery-percentage-printer
       remote: badjeff
       revision: main
+    - name: prospector-zmk-module
+      remote: carrefinho
+      revision: feat/new-status-screens
   self:
     path: config
