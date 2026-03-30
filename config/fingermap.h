@@ -156,14 +156,14 @@ behaviors {
 	
 	// right hand
 		// top row
-			#define _0t6 	&kp M
+			#define _0t6 	&kp K
 			#define _0t7 	&kp Z
 			#define _0t8 	&kp J
 			#define _0t9 	&kp V
 			#define _0t10 	&none
 			#define _0t11 	&kp ESC
 		// home row
-			#define _0h6 	&kp K
+			#define _0h6 	&kp M
 			#define _0h7 	&kp T
 			#define _0h8 	&kp H
 			#define _0h9 	&kp S
