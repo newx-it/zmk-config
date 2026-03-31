@@ -102,8 +102,7 @@ behaviors {
 								akt_ctlc { trigger-keys = <LC(A)>; bindings = <&kp LC(C)>; 											};
 								akt_ctlv { trigger-keys = <LC(C) LC(X) PSCRN>; bindings = <&kp LC(V)>; 								};
 								akt_mail { trigger-keys = <AT>; bindings = <&mail>; 												};
-								akt_yi { trigger-keys = <Y>; max-prior-idle-ms = <300>; bindings = <&kp I>; 						};
-            					akt_ji { trigger-keys = <J>; max-prior-idle-ms = <300>; bindings = <&kp I>; 					 }; };
+								akt_yi { trigger-keys = <Y>; max-prior-idle-ms = <300>; bindings = <&kp I>;						 }; };
 		mage_w: mage_w 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&kp W>;
 								akt_gs { trigger-keys = <G>; max-prior-idle-ms = <300>; bindings = <&kp S>; }; 						};
 		mage_e: mage_e 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&kp E>;
