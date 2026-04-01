@@ -158,7 +158,7 @@ behaviors {
 			#define _0t6 	&kp K
 			#define _0t7 	&kp Z
 			#define _0t8 	&kp J
-			#define _0t9 	&kp V
+			#define _0t9 	&kp B
 			#define _0t10 	&none
 			#define _0t11 	&kp ESC
 		// home row
