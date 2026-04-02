@@ -12,7 +12,7 @@
 				&kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp BSPC
 				&kp Z &kp X &kp C &kp V &kp B &kp B &kp N &kp M &kp COMMA &kp DOT
 				&kp LSHIFT &kp SPACE &kp LALT &kp RGUI &kp RET &kp RCTRL
-				&hw_soft_off
+				&soft_off
 			>;
 		};
 		one { 
