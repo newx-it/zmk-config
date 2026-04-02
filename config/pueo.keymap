@@ -110,8 +110,8 @@ combos { compatible = "zmk,combos";
 		g_cbo_tab 			{ timeout-ms = <50>; 	key-positions = < 	0 2			>; 	bindings = <	&kp TAB				>; 	layers = <	4 5 6	>; 	};
 		g_cbo_esc 			{ timeout-ms = <50>; 	key-positions = < 	0 1 2		>; 	bindings = <	&kp ESC				>; 	layers = <	4 5 6	>; 	};
 
-		g_cbo_1 			{ timeout-ms = <75>; 	key-positions = < 	9 18		>; 	bindings = <	&kp N1				>; 	layers = <	6		>; 	};
-		g_cbo_2 			{ timeout-ms = <75>; 	key-positions = < 	11 20		>; 	bindings = <	&kp N2				>; 	layers = <	6		>; 	};
+		g_cbo_1 			{ timeout-ms = <75>; 	key-positions = < 	11 20		>; 	bindings = <	&kp N1				>; 	layers = <	6		>; 	};
+		g_cbo_2 			{ timeout-ms = <75>; 	key-positions = < 	9 18		>; 	bindings = <	&kp N2				>; 	layers = <	6		>; 	};
 		g_cbo_3 			{ timeout-ms = <75>; 	key-positions = < 	10 19		>; 	bindings = <	&kp N3				>; 	layers = <	6		>; 	};
 		g_cbo_4 			{ timeout-ms = <50>; 	key-positions = < 	9 10 11		>; 	bindings = <	&kp N4				>; 	layers = <	6		>; 	};
 		g_cbo_spsft			{ timeout-ms = <50>; 	key-positions = < 	8 24		>; 	bindings = <	&gamespaceshift		>; 	layers = <	6		>; 	};
