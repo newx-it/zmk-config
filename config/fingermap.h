@@ -43,13 +43,13 @@ macros {
 										<&macro_tap &kp I &kp S &kp U &kp DOT &kp E &kp D &kp U>;	 			 };
 		oa: oa 					{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; 
 									#binding-cells = <0>; bindings = 
-										<&macro_tap &kp O &kp A 												 };
+										<&macro_tap &kp O &kp A>;												 };
 		ue: ue					{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; 
 									#binding-cells = <0>; bindings = 
-										<&macro_tap &kp U &kp E 												 };
+										<&macro_tap &kp U &kp E>;												 };
 		yi: yi					{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; 
 									#binding-cells = <0>; bindings = 
-										<&macro_tap &kp Y &kp I 												 };
+										<&macro_tap &kp Y &kp I>;												 };
 //---game stuff----------------------------------------------------------------------------------------------------
 		gameX: gameX 			{ wait-ms = <5>; tap-ms = <20>; compatible = "zmk,behavior-macro-one-param"; 
 									#binding-cells = <1>; bindings = 
@@ -82,7 +82,6 @@ behaviors {
 		cmt: caps_tap 		{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "balanced"; 
 								tapping-term-ms = <150>; bindings = <&kp>, 
 								<&caps_word>; display-name = "Caps-Tap"; 															};
-
 //---generic modtaps------------------------------------------------------------------------------------------------------------------
 		amt: a_mod_tap 				{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
 										tapping-term-ms = <150>; bindings = <&kp>, <&kp>; display-name = "a-mod-Tap"; 				};
