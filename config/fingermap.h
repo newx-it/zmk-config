@@ -41,7 +41,15 @@ macros {
 		edu: edu 				{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; 
 									#binding-cells = <0>; bindings = 
 										<&macro_tap &kp I &kp S &kp U &kp DOT &kp E &kp D &kp U>;	 			 };
-
+		oa: oa 					{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; 
+									#binding-cells = <0>; bindings = 
+										<&macro_tap &kp O &kp A 												 };
+		ue: ue					{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; 
+									#binding-cells = <0>; bindings = 
+										<&macro_tap &kp U &kp E 												 };
+		yi: yi					{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; 
+									#binding-cells = <0>; bindings = 
+										<&macro_tap &kp Y &kp I 												 };
 //---game stuff----------------------------------------------------------------------------------------------------
 		gameX: gameX 			{ wait-ms = <5>; tap-ms = <20>; compatible = "zmk,behavior-macro-one-param"; 
 									#binding-cells = <1>; bindings = 
@@ -87,8 +95,14 @@ behaviors {
 		tabmt: tabmt 				{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
 										tapping-term-ms = <150>; bindings = <&ezalttab>, <&kp>; display-name = "ezalttab modtap"; 	};
 //---magic----------------------------------------------------------------------------------------------------------------------------
-		mage_tap: mage_tap 			{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-								  		tapping-term-ms = <150>; bindings = <&mage_rev>, <&mage_rep>; display-name = "mage-mod-Tap";};
+		mage_tap: mage_tap 	{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
+								tapping-term-ms = <150>; bindings = <&mage_rev>, <&mage_rep>; display-name = "mage-mod-Tap";		};
+		y_tap: y_tap 		{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
+								tapping-term-ms = <150>; bindings = <&yi>, <&kp Y>; display-name = "mage-o-mod-Tap";				};
+		mage_o_tap: mage_o_tap 	{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
+								tapping-term-ms = <150>; bindings = <&oa>, <&mage_o>; display-name = "mage-o-mod-Tap";				};
+		u_tap: u_tap 		{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
+								tapping-term-ms = <150>; bindings = <&ue>, <&kp u>; display-name = "mage-o-mod-Tap";				};
 		mage_rev: mage_rev 	{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&key_repeat>;
 								akt_shift_home_del { trigger-keys = <BSPC>; bindings = < &shiftXdel HOME >; 						};
 								akt_shift_end_del { trigger-keys = <DEL>; bindings = < &shiftXdel END >; 							};
@@ -144,12 +158,12 @@ behaviors {
 			#define _0h2 	&mage_a
 			#define _0h3 	&mage_e
 			#define _0h4 	&kp C
-			#define _0h5 	&kp Y
+			#define _0h5 	&y_tap 0 0
 		// bottom row
 			#define _0b0 	&bmt LC(BSPC) BSPC
 			#define _0b1 	&kp LSHIFT
-			#define _0b2 	&mage_o
-			#define _0b3 	&kp U
+			#define _0b2 	&mage_o_tap 0 0
+			#define _0b3 	&u_tap 0 0
 			#define _0b4 	&mage_tap 0 0
 			#define _0b5 	&none
 	
