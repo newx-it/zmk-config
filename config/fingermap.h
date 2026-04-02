@@ -97,11 +97,11 @@ behaviors {
 		mage_tap: mage_tap 	{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
 								tapping-term-ms = <150>; bindings = <&mage_rev>, <&mage_rep>; display-name = "mage-mod-Tap";		};
 		y_tap: y_tap 		{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-								tapping-term-ms = <150>; bindings = <&yi>, <&kp Y>; display-name = "mage-o-mod-Tap";				};
+								tapping-term-ms = <150>; bindings = <&yi>, <&kp Y>; display-name = "y-mod-Tap";						};
 		mage_o_tap: mage_o_tap 	{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
 								tapping-term-ms = <150>; bindings = <&oa>, <&mage_o>; display-name = "mage-o-mod-Tap";				};
 		u_tap: u_tap 		{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
-								tapping-term-ms = <150>; bindings = <&ue>, <&kp u>; display-name = "mage-o-mod-Tap";				};
+								tapping-term-ms = <150>; bindings = <&ue>, <&kp U>; display-name = "u-mod-Tap";						};
 		mage_rev: mage_rev 	{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&key_repeat>;
 								akt_shift_home_del { trigger-keys = <BSPC>; bindings = < &shiftXdel HOME >; 						};
 								akt_shift_end_del { trigger-keys = <DEL>; bindings = < &shiftXdel END >; 							};
