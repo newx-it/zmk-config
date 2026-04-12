@@ -19,7 +19,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmk
-      revision: v0.3
+      revision: main
       import: app/west.yml
     - name: zmk-auto-layer
       remote: urob
@@ -46,7 +46,7 @@ manifest:
       remote: carrefinho
       revision: feat/new-status-screens
     - name: palindrome-zmk-config
-      remote: quark-works
+      remote: newx-it
       revision: main
   self:
     path: config
