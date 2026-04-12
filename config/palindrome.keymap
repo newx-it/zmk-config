@@ -1,27 +1,45 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
+#include "fingermap.h"
 
-/ {
+/ { 
+behaviors { // -----------------------------------------------------------------------------------------------
+        hml: home_row_mod_l { 		hold-trigger-key-positions = <  >; 		};
+		hmr: home_row_mod_r { 		hold-trigger-key-positions = <  >; 	 }; };
+// -----------------------------------------------------------------------------------------------------------
 
-    keymap {
-        compatible = "zmk,keymap";
+keymap { compatible = "zmk,keymap";
+		zero 	{ display-name = "base"; // -------------------
+		    bindings = < &none  &kp W  &kp E  &kp R  &kp T &kp Y  &kp U  &kp I    &kp O   &kp P 
+                         &kp A  &kp S  &kp D  &kp F  &kp G &kp H  &kp J  &kp K     &kp L   &kp SEMI 
+                         &kp Z  &kp X  &kp C  &kp V  &kp B &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH >; 
+            sensor-bindings = < &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT >; };
+		one 	{ display-name = "sym"; // --------------------
+		bindings = < &none  &kp W  &kp E  &kp R  &kp T &kp Y  &kp U  &kp I    &kp O   &kp P 
+                         &kp A  &kp S  &kp D  &kp F  &kp G &kp H  &kp J  &kp K     &kp L   &kp SEMI 
+                         &kp Z  &kp X  &kp C  &kp V  &kp B &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH >; 
+            sensor-bindings = < &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT >; };
+		two 	{ display-name = "nav"; // ------------------
+		bindings = < &none  &kp W  &kp E  &kp R  &kp T &kp Y  &kp U  &kp I    &kp O   &kp P 
+                         &kp A  &kp S  &kp D  &kp F  &kp G &kp H  &kp J  &kp K     &kp L   &kp SEMI 
+                         &kp Z  &kp X  &kp C  &kp V  &kp B &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH >; 
+            sensor-bindings = < &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT >; };
+		three 	{ display-name = "fkey"; // -------------------
+		bindings = < &none  &kp W  &kp E  &kp R  &kp T &kp Y  &kp U  &kp I    &kp O   &kp P 
+                         &kp A  &kp S  &kp D  &kp F  &kp G &kp H  &kp J  &kp K     &kp L   &kp SEMI 
+                         &kp Z  &kp X  &kp C  &kp V  &kp B &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH >; 
+            sensor-bindings = < &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT >; };
+		four 	{ display-name = "qwer"; // ----------------------
+		bindings = < &none  &kp W  &kp E  &kp R  &kp T &kp Y  &kp U  &kp I    &kp O   &kp P 
+                         &kp A  &kp S  &kp D  &kp F  &kp G &kp H  &kp J  &kp K     &kp L   &kp SEMI 
+                         &kp Z  &kp X  &kp C  &kp V  &kp B &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH >; 
+            sensor-bindings = < &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT >; };
+		five 	{ display-name = "fg"; // -----------------
+		bindings = < &none  &kp W  &kp E  &kp R  &kp T &kp Y  &kp U  &kp I    &kp O   &kp P 
+                         &kp A  &kp S  &kp D  &kp F  &kp G &kp H  &kp J  &kp K     &kp L   &kp SEMI 
+                         &kp Z  &kp X  &kp C  &kp V  &kp B &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH >; 
+            sensor-bindings = < &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT >; };
+		six 	{ display-name = "fps"; // ------------------------
+		bindings = < &none  &kp W  &kp E  &kp R  &kp T &kp Y  &kp U  &kp I    &kp O   &kp P 
+                         &kp A  &kp S  &kp D  &kp F  &kp G &kp H  &kp J  &kp K     &kp L   &kp SEMI 
+                         &kp Z  &kp X  &kp C  &kp V  &kp B &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH >; 
+            sensor-bindings = < &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT >; }; };
 
-        base {
-
-            bindings = <
-            
-            &studio_unlock  &kp W  &kp E  &kp R  &kp T &kp Y  &kp U  &kp I     &kp O   &kp P 
-            &kp A  &kp S  &kp D  &kp F  &kp G &kp H  &kp J  &kp K     &kp L   &kp SEMI 
-            &kp Z  &kp X  &kp C  &kp V  &kp B &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH
-            
-            >; 
-
-            sensor-bindings = <
-                &inc_dec_kp C_VOL_UP C_VOL_DN
-                &inc_dec_kp RIGHT LEFT
-            >;
-        };
-    };
-};
