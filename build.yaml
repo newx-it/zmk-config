@@ -78,10 +78,10 @@ include:
 
  - board: palindrome_left
    snippet: studio-rpc-usb-uart
-   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_STUDIO=y
  - board: palindrome_right
    snippet: studio-rpc-usb-uart
-   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_STUDIO=y
    
  - board: palindrome_left
    shield: settings_reset
