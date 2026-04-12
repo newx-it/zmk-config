@@ -72,15 +72,15 @@
 
 ---
 include:
- - board: palindrome_left//zmk
+ - board: palindrome_left
    snippet: studio-rpc-usb-uart
    cmake-args: -DCONFIG_ZMK_STUDIO=y
- - board: palindrome_right//zmk
+ - board: palindrome_right
    snippet: studio-rpc-usb-uart
    cmake-args: -DCONFIG_ZMK_STUDIO=y
- - board: palindrome_left//zmk
+ - board: palindrome_left
    shield: settings_reset
    artifact-name: palindrome_left_settings_reset
- - board: palindrome_right//zmk
+ - board: palindrome_right
    shield: settings_reset
    artifact-name: palindrome_right_settings_reset
