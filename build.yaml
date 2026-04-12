@@ -73,7 +73,7 @@
 ---
 include:
  - board: xiao_ble//zmk
-   shield: palindrome_dongle prospector_adapter
+   shield: palindrome_left_dongle prospector_adapter
    cmake-args: -DCONFIG_ZMK_STUDIO=y
 
  - board: palindrome_left
