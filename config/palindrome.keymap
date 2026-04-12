@@ -8,14 +8,14 @@ behaviors { // -----------------------------------------------------------------
 
 keymap { compatible = "zmk,keymap";
 		zero 	{ display-name = "base"; // -------------------
-		    bindings = < &none  &kp W  &kp E  &kp R  &kp T &kp Y  &kp U  &kp I    &kp O   &kp P 
-                         &kp A  &kp S  &kp D  &kp F  &kp G &kp H  &kp J  &kp K     &kp L   &kp SEMI 
-                         &kp Z  &kp X  &kp C  &kp V  &kp B &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH >; 
+		    bindings = < &none  		&mage_a 			&mage_e  	&kp C  			&kp G 		&kp K 	&kp T 		&kp H 	&kp S	&none 
+                         &mage_i  		&mage_o_tap 0 0  	&u_tap 0 U 	&mage_tap 0 0  	&kp W 		&kp M  	&kp D  		&kp L   &kp F   &kp N 
+						 &y_tap 0 Y 	&kp LCTRL			&none  		&kp LGUI  		&lt 2 SPACE &lt 1 R &kp RGUI 	&none 	&kp RCTRL 	&kp B >;
             sensor-bindings = < &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT >; };
 		one 	{ display-name = "sym"; // --------------------
-		bindings = < &none  &kp W  &kp E  &kp R  &kp T &kp Y  &kp U  &kp I    &kp O   &kp P 
-                         &kp A  &kp S  &kp D  &kp F  &kp G &kp H  &kp J  &kp K     &kp L   &kp SEMI 
-                         &kp Z  &kp X  &kp C  &kp V  &kp B &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH >; 
+			bindings = < &kp LS(GRAVE)		&amt LS(N7) N3 		&amt EQUAL N2 	&amt SEMI N1 		&amt BSLH FSLH  	&amt LS(N4) N9 &amt COLON N5 	&amt LS(N8) N6 			&amt LS(N1) N7 			&none 
+                     	 &amt LS(MINUS) N4 	&amt LS(N3) LS(N5)	&amt LS(N2) DQT	&amt MINUS COMMA	&amt   				&none 		   &kp DOT  		&XXleftmt APOS APOS 	&amt LS(DOT) LS(COMMA) 	&amt LS(FSLH) N8 
+                     	 &amt PIPE GRAVE 	&none 				&none  			&amt SPACE			&kp 0  				&none 		   &none   			&none   				&none   				&none   >; 
             sensor-bindings = < &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT >; };
 		two 	{ display-name = "nav"; // ------------------
 		bindings = < &none  &kp W  &kp E  &kp R  &kp T &kp Y  &kp U  &kp I    &kp O   &kp P 
