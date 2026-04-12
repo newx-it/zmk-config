@@ -14,6 +14,8 @@ manifest:
       url-base: https://github.com/badjeff
     - name: carrefinho
       url-base: https://github.com/carrefinho
+    - name: quark-works
+      url-base: https://github.com/quark-works
   projects:
     - name: zmk
       remote: zmk
@@ -43,5 +45,8 @@ manifest:
     - name: prospector-zmk-module
       remote: carrefinho
       revision: feat/new-status-screens
+    - name: palindrome-zmk-config
+      remote: quark-works
+      revision: main
   self:
     path: config
