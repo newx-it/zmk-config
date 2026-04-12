@@ -73,10 +73,8 @@
 ---
 include:
  - board: palindrome_left//zmk
-   snippet: studio-rpc-usb-uart
    cmake-args: -DCONFIG_ZMK_STUDIO=y
  - board: palindrome_right//zmk
-   snippet: studio-rpc-usb-uart
    cmake-args: -DCONFIG_ZMK_STUDIO=y
  - board: palindrome_left//zmk
    shield: settings_reset
