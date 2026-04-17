@@ -92,7 +92,7 @@ combos { compatible = "zmk,combos";
 		// arrows ----------------------------------------------------------------------------------------------------------------------------------------
 		cbo_left 			{ timeout-ms = <40>; 	key-positions = < 	8 14		>; 	bindings = <	&amt LC(LEFT)  LEFT	>; 	layers = <	0		>;	};
 		cbo_up 				{ timeout-ms = <40>; 	key-positions = < 	10 15		>;	bindings = <	&amt LC(UP)    UP	>; 	layers = <	0		>;	};
-		cbo_down 			{ timeout-ms = <40>; 	key-positions = < 	10 15		>;	bindings = <	&amt LC(DOWN)  DOWN	>; 	layers = <	0		>;	};
+		cbo_down 			{ timeout-ms = <40>; 	key-positions = < 	9 16		>;	bindings = <	&amt LC(DOWN)  DOWN	>; 	layers = <	0		>;	};
 		cbo_right 			{ timeout-ms = <40>; 	key-positions = < 	11 17		>; 	bindings = <	&amt LC(RIGHT) RIGHT>;	layers = <	0		>;	};
 		// layers ----------------------------------------------------------------------------------------------------------------------------------------
 		cbo_default 		{ timeout-ms = <40>;	key-positions = < 	10 11 14 15	>;	bindings = <	&to 0				>; 							};
