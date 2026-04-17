@@ -477,7 +477,7 @@ behaviors {
 	// thumbfan
 		// 
 			#define _4thlN 	&none
-			#define _4thlH 	&kp SPACE
+			#define _4thlH 	&mt LCTRL SPACE
 			#define _4thlF	&none
 			
 			#define _4thrF 	&none
