@@ -430,59 +430,59 @@ behaviors {
 // layer 5 - sc2
 	// left hand
 		// top row
-			#define _4t0 	&kp TAB
-			#define _4t1 	&none
-			#define _4t2 	&kp W
-			#define _4t3 	&kp E
-			#define _4t4 	&kp R
-			#define _4t5 	&kp T
+			#define _5t0 	&kp TAB
+			#define _5t1 	&none
+			#define _5t2 	&kp W
+			#define _5t3 	&kp E
+			#define _5t4 	&kp R
+			#define _5t5 	&kp T
 		// home row
-			#define _4h0 	&amt LC(DEL) 	DEL
-			#define _4h1 	&kp A
-			#define _4h2 	&kp S
-			#define _4h3 	&kp D
-			#define _4h4 	&kp F
-			#define _4h5 	&kp G
+			#define _5h0 	&amt LC(DEL) 	DEL
+			#define _5h1 	&kp A
+			#define _5h2 	&kp S
+			#define _5h3 	&kp D
+			#define _5h4 	&kp F
+			#define _5h5 	&kp G
 		// bottom row
-			#define _4b0 	&amt LC(BSPC) 	BSPC
-			#define _4b1 	&kp LSHIFT
-			#define _4b2 	&kp X
-			#define _4b3 	&kp C
-			#define _4b4 	&kp V
-			#define _4b5 	&none
+			#define _5b0 	&amt LC(BSPC) 	BSPC
+			#define _5b1 	&kp LSHIFT
+			#define _5b2 	&kp X
+			#define _5b3 	&kp C
+			#define _5b4 	&kp V
+			#define _5b5 	&none
 	
 	// right hand
 		// top row
-			#define _4t6 	&kp C_PP
-			#define _4t7 	&kp C_PREV
-			#define _4t8 	&kp C_NEXT
-			#define _4t9 	&kp F7
-			#define _4t10 	&none
-			#define _4t11 	&kp ESC
+			#define _5t6 	&kp C_PP
+			#define _5t7 	&kp C_PREV
+			#define _5t8 	&kp C_NEXT
+			#define _5t9 	&kp F7
+			#define _5t10 	&none
+			#define _5t11 	&kp ESC
 		// home row
-			#define _4h6 	&kp C_MUTE
-			#define _4h7 	&kp F2
-			#define _4h8 	&kp F3
-			#define _4h9 	&kp F5
-			#define _4h10	&kp F6
-			#define _4h11	&amt RC(BSPC) 	BSPC
+			#define _5h6 	&kp C_MUTE
+			#define _5h7 	&kp F2
+			#define _5h8 	&kp F3
+			#define _5h9 	&kp F5
+			#define _5h10	&kp F6
+			#define _5h11	&amt RC(BSPC) 	BSPC
 		// bottom row
-			#define _4b6 	&none
-			#define _4b7 	&kp C_VOL_DN
-			#define _4b8 	&kp C_VOL_UP
-			#define _4b9 	&kp F8
-			#define _4b10	&kp RSHIFT
-			#define _4b11	&amt RC(DEL) 	DEL
+			#define _5b6 	&none
+			#define _5b7 	&kp C_VOL_DN
+			#define _5b8 	&kp C_VOL_UP
+			#define _5b9 	&kp F8
+			#define _5b10	&kp RSHIFT
+			#define _5b11	&amt RC(DEL) 	DEL
 
 	// thumbfan
 		// 
-			#define _4thlN 	&none
-			#define _4thlH 	&mt LCTRL SPACE
-			#define _4thlF	&none
+			#define _5thlN 	&none
+			#define _5thlH 	&mt LCTRL SPACE
+			#define _54thlF	&none
 			
-			#define _4thrF 	&none
-			#define	_4thrH	&none
-			#define _4thrN	&none
+			#define _5thrF 	&none
+			#define	_5thrH	&none
+			#define _5thrN	&none
 
 // layer 6 - fps
 	// left hand
