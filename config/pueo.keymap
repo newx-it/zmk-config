@@ -32,7 +32,7 @@ keymap { compatible = "zmk,keymap";
 				_4h1 _4h2 _4h3 _4h4 _4h5 		_4h6 _4h7 _4h8 _4h9 _4h10
 				   	 _4b2 _4b3 _4b4           		 _4b7 _4b8 _4b9
 				         	   _4thlH	      		 _4thrH 		>; };
-		five 	{ display-name = "fg"; // -----------------
+		five 	{ display-name = "sc2"; // -----------------
 		bindings = < _5t2 _5t3 _5t4 _5t5 		_5t6 _5t7 _5t8 _5t9
 				_5h1 _5h2 _5h3 _5h4 _5h5 		_5h6 _5h7 _5h8 _5h9 _5h10
 				   	 _5b2 _5b3 _5b4           		 _5b7 _5b8 _5b9
@@ -109,6 +109,14 @@ combos { compatible = "zmk,combos";
 		// game ------------------------------------------------------------------------------------------------------------------------------------------
 		g_cbo_tab 			{ timeout-ms = <50>; 	key-positions = < 	0 2			>; 	bindings = <	&kp TAB				>; 	layers = <	4 5 6	>; 	};
 		g_cbo_esc 			{ timeout-ms = <50>; 	key-positions = < 	0 1 2		>; 	bindings = <	&kp ESC				>; 	layers = <	4 5 6	>; 	};
+
+		sc_cbo_1 			{ timeout-ms = <50>; 	key-positions = < 	0 9			>; 	bindings = <	&amt F1 N1			>; 	layers = <	5   	>; 	};
+		sc_cbo_2 			{ timeout-ms = <50>; 	key-positions = < 	1 10		>; 	bindings = <	&amt F2 N2			>; 	layers = <	5   	>; 	};
+		sc_cbo_3 			{ timeout-ms = <50>; 	key-positions = < 	2 10		>; 	bindings = <	&amt F3 N3			>; 	layers = <	5   	>; 	};
+		sc_cbo_4 			{ timeout-ms = <50>; 	key-positions = < 	9 18		>; 	bindings = <	&amt F4 N4			>; 	layers = <	5   	>; 	};
+		sc_cbo_5 			{ timeout-ms = <50>; 	key-positions = < 	10 19		>; 	bindings = <	&amt F5 N5			>; 	layers = <	5   	>; 	};
+		sc_cbo_6 			{ timeout-ms = <50>; 	key-positions = < 	11 20		>; 	bindings = <	&amt F6 N6			>; 	layers = <	5   	>; 	};
+		sc_cbo_lshift		{ timeout-ms = <50>; 	key-positions = < 	8 24		>; 	bindings = <	&kp LSHIFT			>; 	layers = <	5   	>; 	};
 
 		g_cbo_1 			{ timeout-ms = <75>; 	key-positions = < 	11 20		>; 	bindings = <	&kp N1				>; 	layers = <	6		>; 	};
 		g_cbo_2 			{ timeout-ms = <75>; 	key-positions = < 	9 18		>; 	bindings = <	&kp N2				>; 	layers = <	6		>; 	};
