@@ -51,7 +51,7 @@ manifest:
       revision: feat/new-status-screens
     - name: palindrome-zmk-config
       remote: newx-it
-      revision: main
+      revision: esb
     - name: zmk-feature-split-esb
       remote: badjeff
       revision: main
