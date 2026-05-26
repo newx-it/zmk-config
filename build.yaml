@@ -79,7 +79,7 @@ include:
    artifact-name: palindrome_prospector
  - board: palindrome_left
    snippet: studio-rpc-usb-uart
-   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
  - board: palindrome_right
    snippet: studio-rpc-usb-uart
    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
