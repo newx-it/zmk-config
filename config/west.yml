@@ -47,8 +47,8 @@ manifest:
       remote: badjeff
       revision: main
     - name: prospector-zmk-module
-      remote: carrefinho
-      revision: feat/new-status-screens
+      remote: newx-it
+      revision: newx-it-esb
     - name: palindrome-zmk-config
       remote: newx-it
       revision: esb
