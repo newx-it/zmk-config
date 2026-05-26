@@ -72,19 +72,9 @@
 
 ---
 include:
- - board: xiao_ble//zmk
-   shield: palindrome_dongle
  - board: palindrome_left
    snippet: studio-rpc-usb-uart
-   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
  - board: palindrome_right
    snippet: studio-rpc-usb-uart
-   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
- - board: xiao_ble//zmk
-   shield: twenny_dongle
- - board: xiao_ble//zmk
-   shield: twenny_left
-   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
- - board: xiao_ble//zmk
-   shield: twenny_right
    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
