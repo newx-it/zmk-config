@@ -79,9 +79,8 @@ behaviors {
 //---layer/state manipulation---------------------------------------------------------------------------------------------------------
         num_word: num_word 	{ compatible = "zmk,behavior-auto-layer"; #binding-cells = <1>;  
 								continue-list = < BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL >; ignore-numbers;					};
-		cmt: caps_tap 		{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "balanced"; 
-								tapping-term-ms = <150>; bindings = <&kp>, 
-								<&caps_word>; display-name = "Caps-Tap"; 															};
+		cmt: caps_tap 		{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
+								tapping-term-ms = <150>; bindings = <&kp>, <&caps_word>; display-name = "Caps-Tap"; 				};
 //---generic modtaps------------------------------------------------------------------------------------------------------------------
 		amt: a_mod_tap 				{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
 										tapping-term-ms = <150>; bindings = <&kp>, <&kp>; display-name = "a-mod-Tap"; 				};
