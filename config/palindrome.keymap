@@ -38,8 +38,8 @@ keymap { compatible = "zmk,keymap";
 						 &none &none &none &none &none &none &none &none &none &none >; 
             sensor-bindings = < &inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LEFT RIGHT >; };
 		six 	{ display-name = "fps"; // ------------------------
-			bindings = < &kp F 			&kp A 			&kp W 			&kp D 			&gameXmt T R 					&none &none &none &none &none
-                    	 &kp LCTRL 		&gameXmt Z Q 	&kp S 			&gameXmt C E 	&gameXmt V G 					&none &none &none &none &none
+			bindings = < &kp F 			&socd A			&socd2 W		&socd D			&gameXmt T R 					&none &none &none &none &none
+                    	 &kp LCTRL 		&gameXmt Z Q 	&socd2 S		&gameXmt C E 	&gameXmt V G 					&none &none &none &none &none
                     	 &gameXmt K H	&gameXmt I J	&gameXmt L M	&kp X 			&kp SPACE 						&none &none &none &none &none >; 
             sensor-bindings = < &inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LEFT RIGHT >; }; };
 
