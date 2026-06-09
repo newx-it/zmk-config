@@ -92,3 +92,14 @@ include:
  - board: palindrome_right
    shield: settings_reset
    artifact-name: palindrome-right-reset
+ - board: xiao_ble//zmk
+   shield: pueo_dongle prospector_adapter
+   artifact-name: pueo-prospector
+ - board: nice_nano//zmk
+   shield: pueo_left
+   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+   artifact-name: pueo-left
+ - board: nice_nano//zmk
+   shield: pueo_right
+   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+   artifact-name: pueo-right
