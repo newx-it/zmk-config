@@ -111,6 +111,7 @@ behaviors {
 								akt_ctl_yz { trigger-keys = < LC(Y) >; bindings = < &kp LC(Z) >; 									};
 								akt_edu { trigger-keys = <AT>; bindings = <&edu>; 												 }; };
 		mage_rep: mage_rep 	{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&key_repeat>;
+								akt_que	 { trigger-keys = <Q>; bindings = <&mage_e>; 												};
 								akt_ctlc { trigger-keys = <LC(A)>; bindings = <&kp LC(C)>; 											};
 								akt_ctlv { trigger-keys = <LC(C) LC(X) PSCRN>; bindings = <&kp LC(V)>; 								};
 								akt_mail { trigger-keys = <AT>; bindings = <&mail>; 												};
