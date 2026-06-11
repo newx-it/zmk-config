@@ -1,2 +1,0 @@
-config SHIELD_NICE_SWAGBOARD
-	def_bool $(shields_list_contains,nice_swagboard)
