@@ -30,9 +30,6 @@ manifest:
     - name: zmk-unicode
       remote: urob
       revision: main
-    - name: zmk-nice-oled
-      remote: newx-it
-      revision: main
     - name: zmk-behavior-socd
       remote: nguyendown
       revision: main
