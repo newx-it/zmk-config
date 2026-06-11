@@ -48,5 +48,8 @@ manifest:
     - name: palindrome-zmk-config
       remote: newx-it
       revision: main
+    - name: lebroke-zmk-config
+      remote: newx-it
+      revision: main
   self:
     path: config
