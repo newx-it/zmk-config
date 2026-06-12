@@ -50,6 +50,9 @@ macros {
 		ueue: ueue					{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; 
 									#binding-cells = <0>; bindings = 
 										<&macro_tap &kp U &kp E &kp U &kp E>;									};
+		ust: ust					{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; 
+									#binding-cells = <0>; bindings = 
+										<&macro_tap &kp U &kp S &kp T>;											};
 		ao: ao 					{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; 
 									#binding-cells = <0>; bindings = 
 										<&macro_tap &kp A &kp O>;												 };
@@ -130,6 +133,7 @@ behaviors {
 		u_tap: u_tap 		{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
 								tapping-term-ms = <150>; bindings = <&ue>, <&kp>; display-name = "u-mod-Tap";						};
 		mage_rev: mage_rev 	{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&key_repeat>;
+								akt_must { trigger-keys = <M>; bindings = <&ust>;	 												};
 								akt_que	 { trigger-keys = <Q>; bindings = <&mage_eu>; 												};
 								akt_shift_home_del { trigger-keys = <BSPC>; bindings = < &shiftXdel HOME >; 						};
 								akt_shift_end_del { trigger-keys = <DEL>; bindings = < &shiftXdel END >; 							};
@@ -140,6 +144,7 @@ behaviors {
 								akt_ctl_yz { trigger-keys = < LC(Y) >; bindings = < &kp LC(Z) >; 									};
 								akt_edu { trigger-keys = <AT>; bindings = <&edu>; 												 }; };
 		mage_rep: mage_rep 	{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&key_repeat>;
+								akt_just { trigger-keys = <J>; bindings = <&ust>;	 												};
 								akt_que	 { trigger-keys = <Q>; bindings = <&mage_e>; 												};
 								akt_ctlc { trigger-keys = <LC(A)>; bindings = <&kp LC(C)>; 											};
 								akt_ctlv { trigger-keys = <LC(C) LC(X) PSCRN>; bindings = <&kp LC(V)>; 								};
