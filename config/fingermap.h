@@ -47,9 +47,9 @@ macros {
 		ue: ue					{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; 
 									#binding-cells = <0>; bindings = 
 										<&macro_tap &kp U &kp E>;												 };
-		ueu: ueu					{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; 
+		ueue: ueue					{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; 
 									#binding-cells = <0>; bindings = 
-										<&macro_tap &kp U &kp E &kp U>;												};
+										<&macro_tap &kp U &kp E &kp U &kp E>;									};
 		ao: ao 					{ wait-ms = <5>; tap-ms = <5>; compatible = "zmk,behavior-macro"; 
 									#binding-cells = <0>; bindings = 
 										<&macro_tap &kp A &kp O>;												 };
@@ -150,13 +150,14 @@ behaviors {
 		mage_e: mage_e 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&kp E>;
 								akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uX E>; }; 						};
 		mage_eu: mage_eu 	{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&eu>;
-								akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&ueu>; }; 						};
+								akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&ueue>; }; 						};
 		mage_a: mage_a 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&kp A>;
 								akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uX A>; }; 						};
 		mage_i: mage_i 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&kp I>;
 								akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uX I>; }; 						};
 		mage_o: mage_o 		{ compatible = "zmk,behavior-adaptive-key"; #binding-cells = <0>; bindings = <&kp O>;
 								akt_ue { trigger-keys = <Q>; max-prior-idle-ms = <300>; bindings = <&uX O>; }; 						};
+//---fun stuff------------------------------------------------------------------------------------------------------------------------
 		ezalttab: ezalttab 	{ compatible = "zmk,behavior-tri-state"; label = "SWAPPER"; #binding-cells = <0>;
             					bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>; ignored-key-positions = <0 2 5 7>;					};
 		deadenter: deadenter { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; 
