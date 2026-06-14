@@ -74,4 +74,5 @@
 include:
  - board: xiao_ble//zmk
    shield: palindrome_dongle
-   artifact-name: palindrome-dongle prospector_adapter
+   artifact-name: palindrome-dongle
+
