@@ -14,10 +14,10 @@ manifest:
       url-base: https://github.com/quark-works   
     - name: urob
       url-base: https://github.com/urob
-    - name: badjeff
-      url-base: https://github.com/badjeff
     - name: nrfconnect
       url-base: https://github.com/nrfconnect
+    - name: zmk
+      url-base: https://github.com/zmkfirmware
   projects:
     - name: zmk
       remote: zmk
