@@ -14,6 +14,8 @@ manifest:
       url-base: https://github.com/quark-works   
     - name: urob
       url-base: https://github.com/urob
+    - name: nrfconnect
+      url-base: https://github.com/nrfconnect
     - name: zmk
       url-base: https://github.com/zmkfirmware
   projects:
@@ -40,10 +42,13 @@ manifest:
       remote: badjeff
       revision: main
     - name: prospector-zmk-module
-      remote: carrefinho
-      revision: feat/new-status-screens
+      remote: newx-it
+      revision: newx-it-esb
     - name: palindrome-zmk-config
       remote: newx-it
+      revision: esb
+    - name: zmk-feature-split-esb
+      remote: badjeff
       revision: main
     - name: zmk-keyboard-lebroke
       remote: newx-it
@@ -66,5 +71,14 @@ manifest:
     - name: zmk-keyboard-wakizashi
       remote: newx-it
       revision: main
+    - name: sdk-nrf
+      remote: badjeff
+      revision: v3.1-branch+zmk-fixes
+      path: nrf
+    - name: nrfxlib
+      remote: nrfconnect
+      revision: v3.1-branch
+      repo-path: sdk-nrfxlib
+      path: nrfxlib
   self:
     path: config
