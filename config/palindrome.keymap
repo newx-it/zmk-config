@@ -8,8 +8,8 @@ behaviors { // -----------------------------------------------------------------
 
 keymap { compatible = "zmk,keymap";
 		zero 	{ display-name = "base"; // -------------------
-			bindings = < &tabmt 0 TAB  	&mage_a 		&mage_e			&kp C  			&kp G 					&kp K 	&kp T 		&kp H 		&s_tap 0 S	&tabmt 0 TAB
-						 &mage_i  		&mage_o 		&u_tap 0 U 		&mage_tap 0 0  	&kp W 					&kp M  	&kp D  		&kp L   	&f_tap 0 F 	&kp N 
+			bindings = < &tabmt 0 TAB  	&mage_a_tap 0 0	&mage_etap 0 0	&kp C  			&kp G 					&kp K 	&kp T 		&kp H 		&s_tap 0 S	&tabmt 0 TAB
+						 &mage_i  		&mage_otap 0 0 	&u_tap 0 U 		&mage_tap 0 0  	&kp W 					&kp M  	&kp D  		&kp L   	&f_tap 0 F 	&kp N 
 						 &y_tap 0 Y 	&sk LGUI		&sk LALT  		&sk LCTRL  		&lt 2 SPACE 			&lt 1 R &sk RCTRL 	&sk LALT	&sk RGUI	&kp B >;
             sensor-bindings = < &inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LEFT RIGHT >; };
 		one 	{ display-name = "sym"; // --------------------
