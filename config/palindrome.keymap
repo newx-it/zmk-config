@@ -8,8 +8,8 @@ behaviors { // -----------------------------------------------------------------
 
 keymap { compatible = "zmk,keymap";
 		zero 	{ display-name = "base"; // -------------------
-			bindings = < &tabmt 0 TAB  	&mage_a_tap 0 0	&mage_e_tap 0 0	&kp C  			&kp G 					&kp K 	&kp T 		&kp H 		&s_tap 0 S	&tabmt 0 TAB
-						 &mage_i  		&mage_o_tap 0 0 &u_tap 0 U 		&mage_tap 0 0  	&kp W 					&kp M  	&kp D  		&kp L   	&f_tap 0 F 	&kp N 
+			bindings = < &tabmt 0 TAB  	&mage_a_tap 0 0 &mage_e_tap 0 0 &kp C  			&kp G 					&kp K 	&kp T 		&kp H 		&s_tap 0 S	&tabmt 0 TAB
+                         &mage_i  		&mage_o_tap 0 0 &u_tap 0 U 		&mage_tap 0 0  	&kp W 					&kp M  	&kp D  		&kp L   	&f_tap 0 F 	&kp N 
 						 &y_tap 0 Y 	&sk LGUI		&sk LALT  		&sk LCTRL  		&lt 2 SPACE 			&lt 1 R &sk RCTRL 	&sk LALT	&sk RGUI	&kp B >;
             sensor-bindings = < &inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LEFT RIGHT >; };
 		one 	{ display-name = "sym"; // --------------------
@@ -33,9 +33,9 @@ keymap { compatible = "zmk,keymap";
                      	 &kp LCTRL 	&none 	&none 	&kp LALT 	&gameXmt LCTRL SPACE		&kp LCTRL 	&none 	&none 	&kp LALT 	&gameXmt LCTRL SPACE >; 
             sensor-bindings = < &inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LEFT RIGHT >; };
 		five 	{ display-name = "fg"; // -----------------
-			bindings = < &kp A &none &none &none &none &none &none &none &none &none 
-						 &none &none &none &none &none &none &none &none &none &none
-						 &none &none &none &none &none &none &none &none &none &none >; 
+			bindings = < &kp TAB 	&socd A 	&socd2 W 	&socd D 	&kp R 			&none &none &none &none &none 
+						 &kp LSHIFT &none 		&socd2 S	&none 		&kp F 			&none &none &none &none &none
+						 &kp N5		&kp N4 		&none 		&kp N1 		&kp SPACE		&none &none &none &none &none >; 
             sensor-bindings = < &inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LEFT RIGHT >; };
 		six 	{ display-name = "fps"; // ------------------------
 			bindings = < &kp F 			&socd A			&socd2 W		&socd D			&gameXmt T R 					&kp F 			&socd A			&socd2 W		&socd D			&gameXmt T R
