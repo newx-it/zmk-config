@@ -45,6 +45,7 @@ keymap { compatible = "zmk,keymap";
 
 combos { compatible = "zmk,combos";
         // alphas ----------------------------------------------------------------------------------------------------------------------------------------
+		cbo_z 				{ timeout-ms = <40>; 	key-positions = < 1 11		>; 	bindings = <	&kp Z				>;	layers = <	0			>; 	};
 		cbo_q 				{ timeout-ms = <40>; 	key-positions = < 2 12		>; 	bindings = <	&kp Q				>;	layers = <	0			>; 	};
 		cbo_p 				{ timeout-ms = <40>; 	key-positions = < 4 14		>; 	bindings = <	&p_tap 0 P			>; 	layers = <	0			>; 	};
 		cbo_x 				{ timeout-ms = <40>; 	key-positions = < 5 15		>; 	bindings = <	&kp X				>;	layers = <	0			>; 	};
