@@ -79,10 +79,9 @@ behaviors {
 //---simple config--------------------------------------------------------------------------------------------------------------------
 		socd2: socd2 		{ compatible = "zmk,behavior-socd"; #binding-cells = <1>; bindings = <&kp>; 							};
 		uc: unicode 		{ default-mode = <UC_MODE_WIN_COMPOSE>;																	};
-		sl: sticky_layer 	{ release-after-ms = <750>; quick-release; 																};
+		sl: sticky_layer 	{ release-after-ms = <600>; quick-release; 																};
 		sk: sticky_key 		{ release-after-ms = <750>; quick-release; 																};
 		mt: mod_tap 		{ tapping-term-ms = <200>; 																				};
-
 //---homerow mods---------------------------------------------------------------------------------------------------------------------
 		hml: home_row_mod_l { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "balanced"; 
 								require-prior-idle-ms = <300>; tapping-term-ms = <300>; quick-tap-ms = <200>; 
@@ -90,7 +89,6 @@ behaviors {
         hmr: home_row_mod_r { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "balanced"; 
 								require-prior-idle-ms = <300>; tapping-term-ms = <300>; quick-tap-ms = <200>; 
 								hold-trigger-key-positions = <>; bindings = <&kp>, <&kp>; 											};
-
 //---layer/state manipulation---------------------------------------------------------------------------------------------------------
         num_word: num_word 	{ compatible = "zmk,behavior-auto-layer"; #binding-cells = <1>;  
 								continue-list = < BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL >; ignore-numbers;					};
@@ -107,6 +105,8 @@ behaviors {
 										tapping-term-ms = <150>; bindings = <&Xspace>, <&kp>; display-name = "Xspace mod-Tap"; 		};
 		tabmt: tabmt 				{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
 										tapping-term-ms = <150>; bindings = <&ezalttab>, <&kp>; display-name = "ezalttab modtap"; 	};
+		slt: slt 					{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
+										tapping-term-ms = <150>; bindings = <&sl>, <&kp>; display-name = "sticky layer modtap"; 	};					
 //---magic----------------------------------------------------------------------------------------------------------------------------
 		mage_tap: mage_tap 	{ compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "tap-preferred"; 
 								tapping-term-ms = <150>; bindings = <&mage_rev>, <&mage_rep>; display-name = "mage-mod-Tap";		};
